@@ -1,0 +1,312 @@
+/*訊息分開*/
+/** 底 **/
+body {
+font-family: Microsoft JhengHei !important;
+background: rgba(0,0,0,0) !important;
+margin: 0 auto!important;
+overflow: hidden!important;
+word-wrap: break-word!important;
+}
+
+html{
+font-family: Microsoft JhengHei !important;
+font-size: 1em !important;
+font-weight: 900 !important;
+}
+
+
+/*歡迎字體*/
+.chat-line__moderation,
+.chat-line__status{
+color: #ff9999 !important; /*顏色*/
+font-size:1.3em !important;
+text-shadow:
+-1px -1px 1px #565656,
+-1px  1px 1px #565656,
+ 1px -1px 1px #565656,
+ 1px  1px 1px #565656!important; /*外框*/
+}
+
+/*聊天室標題*//*排行榜*/
+.stream-chat-header, .GoWUq ,.gHqJZO ,.hsXgFK{
+	border-radius: 10px !important; /*圓邊*/
+	background-color: #FFFFFFbb !important; /*排行榜前底色*/
+	height: 80% !important; /*高*/
+	/*margin: 0px 0px 10px 0px !important*/;/*縮排上右下左*/
+} 
+
+/*背景  RGB .jzgYuX */
+.khQaYz,.gVEmBy,.jWHzQH {
+border-radius: 10px !important; /*圓邊*/
+height: 150% !important;
+	background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0) !important;
+ animation: animate 1.5s linear infinite !important;
+}
+@keyframes animate {
+  100%{
+    filter: hue-rotate(360deg);}
+}
+
+/*登入提示*/
+.Layout-sc-1xcs6mc-0.bANGbT.chat-signup-gate-overlay {
+    display: none !important;
+}
+
+
+/*贈禮人*/
+.dCzPRD {
+    font-size: 1em !important;}
+.sub-gift-count__icon {  }
+.emRhxP {
+    font-size: 1.2em;}
+
+/*大禮盒*/
+.bits-leaderboard-medal__big {
+    height: 2.5em !important;
+    width: 2.5em !important;
+}
+/*小禮盒*/
+.bits-leaderboard-medal__small {
+    height: 1.5em !important;
+    width: 1.5em !important;
+}
+.stream-chat-header, .channel-leaderboard{
+	/*display: none ;*/}
+
+.stream-chat-header, .iFaqlo {
+    display: none !important; }
+
+/*<>*/
+.iFVGaJ,.cWETrY ,.eaWGxV{
+    display: none !important;}
+/*__*/
+.iRJXJp,.fzMebA ,.iwYxLp {
+    display: none !important;}
+
+ /*打字框*/
+.ember-chat .chat-room, .chat-input{
+	display: none!important;
+}
+
+/*右側卷軸*/
+.simplebar-track{
+	display: none !important;
+}
+
+/*公告內容*/
+
+/*.chat-line__message, .duJXWu {
+    background: rgba(255,55,55, 0)}*/
+/*.chat-line__message, .fcPbos {
+    background: rgba(255,55,55, 0)}*/
+/*.chat-line__message, .cNJbGZ {
+    background: rgba(255,55,55, 1)}*/
+ 
+
+/*聊天室內容主體*/
+.hklDpq {
+/*    margin-top: -15px !important;*/
+}
+
+
+/* twitch 中文ID */
+/*.chat-author__display-name, {
+	 color: #NNNNNN ; 
+}*/
+
+/* twitch 帳號 */
+.chat-author__intl-login, {
+/*	 opacity: 1*/; /*透明度*/
+ /* display: none; */ /*不顯示*/
+}
+
+
+/*聊天室*/
+div.popout-chat-page,
+section.chat-room {
+    background: rgba(50,50,50,0) !important; 
+    color: #bbbbbb !important;
+    border-radius: 15px  !important; /*圓邊*/
+}
+
+/*聊天室訊息*/
+.chat-line__message {
+font-family: Microsoft JhengHei !important; /*字型*/
+font-weight: 900 !important;  /*字粗*/
+line-height: 1.1em !important;  /*行高*/
+font-size: 1.5em !important; /*字體大小*/
+color: #FFFFFF; /*聊天室訊息顏色*/ 
+  margin: 5px 0px 0px 0px; /*上下樓間隔*/
+  padding: 5px 5px 5px 10px; /*縮排上右下左*/
+  background-color: rgba(0,0,0, 0.5); /*訊息背景*/
+  border-radius: 10px; /*圓邊*/
+ text-shadow:
+-1px -1px 1px #565656,
+-1px  1px 1px #565656,
+ 1px -1px 1px #565656,
+ 1px  1px 1px #565656!important; /*外框*/
+
+
+  /*border: 4px solid #0000ff !important;*/
+ /* -webkit-text-stroke: 0.2px #000 !important;*//*外框*/
+/*text-shadow: 0px 0px 10px grey !important;*/
+}
+
+
+/*ID不透明*/
+.chat-author__intl-login{
+	opacity: 1;
+}
+.chat-author__intl-login{
+	opacity: 1;
+}
+
+/*徽章大小*/
+.chat-badge{
+	height: 1.2em!important;}
+
+/*貼圖大小*/
+.chat-line__message--emote{
+	width: 2em !important;
+	margin-top: -1.5rem !important;
+}
+
+/*刪除訊息*/
+.chat-line__message--deleted-notice{
+	color: #ff9999 !important;
+}
+
+
+/*提示訊息文字*/
+p.CoreText-sc-cpl358-0 {
+    font-size: 1em !important;
+}
+
+.Layout-sc-nxg1ff-0.gtLBqE {
+    font-size: 1.3em !important;
+}
+
+ /*回覆原始訊息*/
+.PGirV {   
+    /*color: #b753ff !important;*/
+	/*font-size: 1.5em !important;*/
+}
+
+
+
+.dhyMxv {
+   color: #d799dc ;
+    font-size: 1em !important;
+}
+.kYSkP {
+color: #d799dc  !important;
+}
+
+/*醒目訊息*/
+.chat-line__message-body--highlighted{
+	/*background: #00ff00;*/ /*底*/
+	/*border: 4px solid #0000ff;*/ /*框*/
+/*    font-size: 1.5em !important;*/
+       background: #755ebc00 !important;
+    border: 4px solid #755ebc00 !important;
+}
+
+
+/*提示訊息*/
+.user-notice-line{
+	font-size: 1em !important;
+	/*border-left:4px solid #FFFF00;*/ /*左側顏色*/
+
+   /* line-height: 1em !important; */ /*行高*/
+	/*color: blue ;*/
+
+-webkit-background-size:auto !important;
+
+
+background:rgba(255,255,100,0.8) !important; /*背景色*/
+}
+
+/*提示醒目標題*/
+.gqSSwW {
+   font-size: 1.3em !important;
+    color: #FF0000 !important;
+ text-shadow:
+-1px -1px 1px #c4c4c4,
+-1px  1px 1px #c4c4c4,
+ 1px -1px 1px #c4c4c4,
+ 1px  1px 1px #c4c4c4!important; /*外框*/
+    line-height: 1em !important;
+} 
+
+
+
+/*提示醒目ID*/
+/*.fcPbos {
+   }*/
+
+ /*提示醒目內容*/
+ .ljiFXM {
+   }
+
+
+/*公告標題*/
+.jZyKeT {
+    background: #ffb2ebb5 !important;
+}
+
+
+/*公告內容*/
+
+/*.chat-line__message, .duJXWu {
+    background: rgba(255,55,55, 0)}*/
+/*.chat-line__message, .fcPbos {
+    background: rgba(255,55,55, 0)}*/
+/*.chat-line__message, .cNJbGZ {
+    background: rgba(255,55,55, 0)!important;}*/
+ 
+/*活動投票預測*/
+/*.bvwNpe {
+    background-color: #de91cd !important;
+}*/
+
+/*倒數條*/
+.flneTL{
+	background: #da49bb !important;
+}
+
+/*公告*/
+.announcement-line {
+     /*   border: 5px solid rgb(241, 148, 200) !important;*/
+}
+/*.Layout-sc-nxg1ff-0.cNJbGZ.announcement-line {
+    color: black;
+}*/
+/*公告背景*/
+.announcement-line {
+    background: rgba(255,255,255,0)!important;}
+
+/*釘選內容*/
+p.CoreText-sc-cpl358-0.ikideB {
+    font-size: 1.5em !important;
+}
+
+/*將繼續使用???贈禮*/
+.dHrscT {
+    font-size: 1.3em !important;
+   }
+
+
+/*超連結*/
+.link-fragment {
+    color: #bf94ff !important;
+    }
+
+/*.ember-chat .chat-messages .chat-line{
+	color: #ff0000 !important;}
+.ember-chat .chat-messages .chat-line.admin{
+	color: #ff0000 !important;}*/
+
+
+.Layout-sc-1xcs6mc-0.bOiLDW.highlight.highlight__collapsed {
+    display: none !important;
+}
