@@ -1,274 +1,1885 @@
-D:\User\doggy\Desktop\qincai>python api.py
-
-DevTools listening on ws://127.0.0.1:11257/devtools/browser/4f922800-fbf2-4601-84fa-f0dc51dac84c
-開啟直播間 https://live.douyin.com/897550903629，開始監控 30 秒的 XHR / Fetch 請求...
-
-[可能 API] https://lf-security.bytegoofy.com/obj/security-secsdk/runtime-stable.js
-[Response JSON]: /*!
-* @byted/secsdk-strategy v1.0.28
-* (c) 2025
-*/
-!function(t){"function"==typeof define&&define.amd?define(t):t()}((function(){"use strict";var t,e,n,r=window.fetch,o=[],i=!1,a=function(t,e,n){["projectId","env","name","sdkVersion","decisionName","strategyName","strategyVersion","functionName","actionType"].forEach((function(t){void 0===n[t]&&(n[t]="-")}));var a=parseInt(e);a&&(o.push({name:t.name,tags:n,value:a,type:t.type}),i||(i=!0,setTimeout((function(){var t=JSON.stringify({values:o});o=[];window.use("coreLoader").customReportHost||(r("https://security.zijieapi.com/api/metrics/emit",{method:"post",body:t,mode:"cors",headers:{"Content-Type":"application/json"}}).catch((function(t){})),i=!1)}),2e3)))};function c(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=Array(e);n<e;n++)r[n]=t[n];return r}function s(t,e,n,r,o,i,a){try{var c=t[i](a),s=c.value}catch(t){return void n(t)}c.done?e(s):Promise.resolve(s).then(r,o)}function u(t){return function(){var e=this,n=arguments;return...
-
-[可能 API] https://lf-security.bytegoofy.com/obj/security-secsdk/config_39.js
-[Response JSON]: /*!
-* @byted/secsdk-strategy v1.0.1
-* (c) 2024
-*/
-!function(e){"function"==typeof define&&define.amd?define(e):e()}((function(){"use strict";window.registToModule("globalConfig",{strategy:{hitGray:{body:{version:"1.0.0",key:"hitGray",name:"灰度切流策略",expression:function(e){for(var o=window.use("globalConfig").strategy.hitGray.config,n=window.use("ActionType"),t=o.selectors,i=o.sampleRatio,a=[],r=0,s=t;r<s.length;r++){for(var l=s[r],p=l.path,f=l.value,u=l.op,d=window,h=p.split("."),g=0,c=0,v=h;c<v.length;c++){var w=v[c];d&&(g++,d=d[w])}window!==d&&g===h.length&&("==="===u?a.push(d===f):"!=="===u&&a.push(d!==f))}return 1e4*Math.floor(Math.random())<i&&a.push(!0),{type:a.length>0&&a.some((function(e){return e}))?n.REWRITE:n.PASS}}},config:{selectors:[{path:"gfdatav1.envName",value:"prod",op:"!=="},{path:"SSR_RENDER_DATA.envService",value:"prod",op:"!=="}],sampleRatio:0}}}})}));
-...
-
-[可能 API] https://lf-security.bytegoofy.com/obj/security-secsdk/project_39.js
-[Response JSON]: /*!
-* @byted/secsdk-strategy v1.0.1
-* (c) 2024
-*/
-!function(e){"function"==typeof define&&define.amd?define(e):e()}((function(){"use strict";window.registToGlobal("executeApiStorageSet",(function(e){var n=e.payload,t=n.context,i=n.key,o=n.value;return e.payload.originFn.apply(t,[i,o])}))}));
-//# sourceMappingURL=project_localstorage.umd.js.map
-...
-
-[可能 API] https://lf-security.bytegoofy.com/obj/security-secsdk/strategy_39.js?v=1
-[Response JSON]: /*!
-* @byted/secsdk-strategy v1.0.1
-* (c) 2024
-*/
-!function(e){"function"==typeof define&&define.amd?define(e):e()}((function(){"use strict";window.registToModule("strategy",{event:{},strategy:{report:{body:{version:"1.0.0",key:"report",name:"上报配置策略"},config:{bid:"webcast_douyin_pc",sampleRatio:1e4}}},execution:{}})}));
-//# sourceMappingURL=strategy_39.js.map
-...
-
-[可能 API] https://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_or4.flv?arch_hrchy=w1&exp_hrchy=w1&expire=1761860884&major_anchor_level=common&sign=eb3faf79dc66f2f0c27649ea931db57d&t_id=037-20251024054804236B6E0ED04C1D5524A9-1uX7nz&unique_id=stream-694656385925775505_145_flv_or4&_session_id=712-20251024054804917167831447F200013F.1761256084917.45739&rsi=0&abr_pts=-800
-[Response JSON]: 無法直接取得或非 JSON
-
-[可能 API] https://mcs.zijieapi.com/webid?aid=7497&sdk_version=5.1.23_dy&device_platform=web
-[Response JSON]: {"e":0,"web_id":"7564537248440878618"}...
-
-[可能 API] https://mcs.zijieapi.com/webid?aid=6383&sdk_version=5.1.23_dy&device_platform=web
-[Response JSON]: {"e":0,"web_id":"7564537249564657190"}...
-
-[可能 API] https://mcs.zijieapi.com/list?aid=7497&sdk_version=5.1.23_dy&device_platform=web
-[Response JSON]: {"e":0,"sc":4,"tc":4}...
-
-[可能 API] https://mcs.zijieapi.com/list?aid=6383&sdk_version=5.1.23_dy&device_platform=web
-[Response JSON]: {"e":0,"sc":1}...
-
-[可能 API] https://www.douyin.com/service/2/abtest_config/
-[Response JSON]: {"data":{"activity_push":{"val":1,"vid":"90087666"},"ad_comment_ai_preload_status":{"val":1,"vid":"90108835"},"add_page_view_log":{"val":true,"vid":"90120742"},"after_lcp_execute":{"val":1,"vid":"6071955"},"ai_douyin_entry":{"val":0,"vid":"91257907"},"ai_note":{"val":1,"vid":"13874760"},"ai_search_base_func":{"val":1,"vid":"91257906"},"ai_search_page":{"val":2,"vid":"91056285"},"ai_search_result_new":{"val":1,"vid":"91304360"},"ai_top1_card_policy":{"val":1,"vid":"91304359"},"allow_low_danmaku":{"val":1,"vid":"12006415"},"android_32_bit":{"val":1,"vid":"90093629"},"ask_ai_rs_v2":{"val":1,"vid":"91303898"},"audio_grouping_strategy":{"val":1,"vid":"90122460"},"author_card_slide_optimize":{"val":1,"vid":"12670731"},"author_optimize":{"val":{"fetch":0,"render":1},"vid":"12670731"},"auto_clarity_reselect":{"val":1,"vid":"12922345"},"auto_show_download_guide_in_fifa":{"val":1,"vid":"90092748"},"avatar_live_mode":{"val":1,"vid":"90081882"},"backpack_entry":{"val":1,"vid":"90090776"},"base_on_...
-
-[可能 API] https://live.douyin.com/webcast/user/
-
-[可能 API] https://mon.zijieapi.com/monitor_web/settings/browser-settings?bid=webcast_douyin_pc&store=1
-[Response JSON]: {"data":{"sample":{"sample_rate":1,"include_users":["7460450975264163354","3488110895447399"],"sample_granularity":"session","rules":[{"name":"js_error","enable":true,"sample_rate":1,"conditional_sample_rules":[{"sample_rate":0.1,"filter":{"type":"and","children":[{"type":"rule","field":"payload.error.message","op":"regex","groupKey":"","values":["Failed to fetch"]}]}},{"sample_rate":0,"filter":{"type":"and","children":[{"type":"rule","field":"payload.error.message","op":"regex","groupKey":"","values":["chrome-extension:\\/\\/"]}]}},{"sample_rate":0,"filter":{"type":"and","children":[{"type":"rule","field":"payload.error.stack","op":"regex","groupKey":"","values":["chrome-extension:\\/\\/"]}]}},{"sample_rate":0,"filter":{"type":"and","children":[{"type":"rule","field":"payload.error.message","op":"eq","groupKey":"","values":["{\"data\":{\"prompts\":\"无权取消静音，请联系主播或管理员取消静音\"},\"status_code\":4004054}"]},{"type":"rule","field":"payload.error.name","op":"eq","groupKey":"","values":["Unhand...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/solution/resource/list/?spot_keys=7359502129541449780_douyin_pc_tab&app_id=6383&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=QXUfDwtyQx5fFdMt8cnwSS9lkgLMNP8j9aTQWiMKtOK1cqlaCmNuPNtOcozr4DQ758pTio371xzAYxVcsoUi1AnkwmpvSsv6SsC9V68oZZ7IYTihVqRoCDGLuJiP%2F58E%2FQ1Gx17IAU8O1dQUkqdT8dlHK%2Flw5QbpS790fxvaY1wI6-sS7BR%3D
-[Response JSON]: {"status_code":0,"status_msg":"","resource_list":[]}...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/page/turn/offline?device_platform=webapp&aid=6383&channel=channel_pc_web&pc_client_type=1&pc_libra_divert=Windows&update_version_code=170400&support_h265=0&support_dash=0&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=YJ4jkqtjO28fFd%2FbYOnhS79lMLoArBSjo-i2b7ZutOYDOqMO5WNgPNbOaoznsEQ7CmBziK3HXxFAbEdczoUi1AnkLmpDuY46Ss9CVU0o8Z7Zbsihnqf2CkboKJic%2FcSE%2F%2F1txIJ66U%2FOZdOUirQT8Bl7K%2FUL5YYpS79TfPfaO1qZXTsn7kW%3D
-[Response JSON]: {"status_code":0,"user_switch":0}...
-
-[可能 API] https://lf3-static.bytednsdoc.com/obj/eden-cn/666eh7nuhfvhpebd/douyin_web/index-ad-22.js
-[Response JSON]: function adblock() {
-  var e=document.createElement('div');
-  e.id='oBDtiKcPyHYW';
-  e.style.display='none';
-  document.body.appendChild(e);
+{
+    "data": {
+        "data": [
+            {
+                "id_str": "7564520129317358371",
+                "status": 2,
+                "status_str": "2",
+                "title": "敢不敢进来看看才艺主播",
+                "user_count_str": "54",
+                "cover": {
+                    "url_list": [
+                        "https://p11-webcast-sign.douyinpic.com/image-cut-tos-priv/897a670bc1cc11735e25ce0e12d3c2aa~tplv-qz53dukwul-common-resize:0:0.image?biz_tag=app_6383_webcast\u0026from=webcast.room.pack\u0026l=2025102406004288779862B5C83F50754A\u0026lk3s=39e7556e\u0026s=enter_room\u0026sc=webcast_cover\u0026x-expires=1763848842\u0026x-signature=e%2BVMZRIQ%2B0rrRH3BmmZdaT90Nsg%3D",
+                        "https://p3-webcast-sign.douyinpic.com/image-cut-tos-priv/897a670bc1cc11735e25ce0e12d3c2aa~tplv-qz53dukwul-common-resize:0:0.image?biz_tag=app_6383_webcast\u0026from=webcast.room.pack\u0026l=2025102406004288779862B5C83F50754A\u0026lk3s=39e7556e\u0026s=enter_room\u0026sc=webcast_cover\u0026x-expires=1763848842\u0026x-signature=Wyn20dlosnD0SlxHCOjGPe6S%2FwE%3D"
+                    ]
+                },
+                "stream_url": {
+                    "flv_pull_url": {
+                        "FULL_HD1": "http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_or4.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=6e28f956c9056dd278c1b4c858888de6\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_or4",
+                        "HD1": "http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_hd.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=f50472ff3407149e3a99d61e398f990d\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_hd",
+                        "SD1": "http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000ld.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=bbcd4fd0f702c94613ea5ddb8196f910\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_Stage0T000ld",
+                        "SD2": "http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000sd.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=9455b3092374b8471eb009cbb1384346\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_Stage0T000sd"
+                    },
+                    "default_resolution": "HD1",
+                    "hls_pull_url_map": {
+                        "FULL_HD1": "http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_or4.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=9940c09b665623738a8fa0ec4e4362af\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb",
+                        "HD1": "http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_hd.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=ecb783056fd60ce33ac80bd4f049d50f\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb",
+                        "SD1": "http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000ld.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=e317170ba8c6658986396923f688ab28\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb",
+                        "SD2": "http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000sd.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=e414e490d5eab2dba208e6aa5096617c\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb"
+                    },
+                    "hls_pull_url": "http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_or4.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=9940c09b665623738a8fa0ec4e4362af\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb",
+                    "stream_orientation": 1,
+                    "live_core_sdk_data": {
+                        "pull_data": {
+                            "options": {
+                                "default_quality": {
+                                    "name": "蓝光",
+                                    "sdk_key": "origin",
+                                    "v_codec": "264",
+                                    "resolution": "1088x1920",
+                                    "level": 4,
+                                    "v_bit_rate": 0,
+                                    "additional_content": "",
+                                    "fps": 0,
+                                    "disable": 0
+                                },
+                                "qualities": [
+                                    {
+                                        "name": "标清",
+                                        "sdk_key": "ld",
+                                        "v_codec": "264",
+                                        "resolution": "480x847",
+                                        "level": 1,
+                                        "v_bit_rate": 1000000,
+                                        "additional_content": "",
+                                        "fps": 30,
+                                        "disable": 0
+                                    },
+                                    {
+                                        "name": "高清",
+                                        "sdk_key": "sd",
+                                        "v_codec": "264",
+                                        "resolution": "540x952",
+                                        "level": 2,
+                                        "v_bit_rate": 1500000,
+                                        "additional_content": "",
+                                        "fps": 15,
+                                        "disable": 0
+                                    },
+                                    {
+                                        "name": "超清",
+                                        "sdk_key": "hd",
+                                        "v_codec": "264",
+                                        "resolution": "720x1270",
+                                        "level": 3,
+                                        "v_bit_rate": 2000000,
+                                        "additional_content": "",
+                                        "fps": 30,
+                                        "disable": 0
+                                    },
+                                    {
+                                        "name": "蓝光",
+                                        "sdk_key": "origin",
+                                        "v_codec": "264",
+                                        "resolution": "1088x1920",
+                                        "level": 4,
+                                        "v_bit_rate": 3145000,
+                                        "additional_content": "",
+                                        "fps": 0,
+                                        "disable": 0
+                                    }
+                                ]
+                            },
+                            "stream_data": "{\"common\":{\"ts\":\"1761256842\",\"session_id\":\"037-2025102406004288779862B5C83F50754A-2TKLNb\",\"stream\":\"694656385925775505\",\"version\":0,\"rule_ids\":\"{\\\"ab_version_trace\\\":null,\\\"sched\\\":\\\"{\\\\\\\"result\\\\\\\":{\\\\\\\"hit\\\\\\\":\\\\\\\"default\\\\\\\",\\\\\\\"cdn\\\\\\\":191}}\\\"}\",\"common_trace\":\"{\\\"StrategyTrace\\\":{\\\"Neptune\\\":{\\\"PlayStream\\\":{\\\"ids\\\":null}}},\\\"BusinessType\\\":\\\"default_business\\\",\\\"BigeventAnchorLevel\\\":\\\"\\\",\\\"BizType\\\":\\\"ecom_room\\\",\\\"SceneType\\\":\\\"亲子生活垂类达人\\\"}\",\"app_id\":\"100100\",\"major_anchor_level\":\"common\",\"mode\":\"Normal\",\"lines\":{\"main\":\"line_191\"},\"p2p_params\":{\"PcdnIsolationConfig\":{\"IsolationName\":\"isolation2\",\"FsV4Domain\":\"vcl-brain.ndcppx.com\",\"FsV6Domain\":\"vcl-brain-v6.ndcppx.com\",\"StunV4Domain\":\"vc-mirror.ndcpp.com\",\"StunV6Domain\":\"vc-mirror-v6.ndcpp.com\",\"HoleV4Domain\":\"vcl-hole.ndcppx.com\",\"HoleV6Domain\":\"vcl-hole-v6.ndcppx.com\"}},\"stream_data_content_encoding\":\"default\",\"common_sdk_params\":{\"main\":\"{}\"},\"stream_name\":\"stream-694656385925775505\",\"main_push_id\":145,\"backup_push_id\":0},\"data\":{\"ld\":{\"main\":{\"flv\":\"http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000ld.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=bbcd4fd0f702c94613ea5ddb8196f910\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_Stage0T000ld\",\"hls\":\"http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000ld.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=e317170ba8c6658986396923f688ab28\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\",\"cmaf\":\"\",\"dash\":\"\",\"lls\":\"http://pull-lls-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000ld.sdp?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=40450e71b537859b3cdcf5044f2ec06c\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_lls_Stage0T000ld\",\"tsl\":\"\",\"tile\":\"\",\"http_ts\":\"\",\"ll_hls\":\"\",\"sdk_params\":\"{\\\"VCodec\\\":\\\"h264\\\",\\\"vbitrate\\\":1000000,\\\"resolution\\\":\\\"480x847\\\",\\\"gop\\\":4,\\\"drType\\\":\\\"sdr\\\",\\\"fps\\\":30}\",\"enableEncryption\":false}},\"ao\":{\"main\":{\"flv\":\"http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505.flv?arch_hrchy=w1\u0026eupf_relay_mode=err\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026only_audio=1\u0026sign=5c3d702e1db6945283d0b50503d6ed28\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv\",\"hls\":\"\",\"cmaf\":\"\",\"dash\":\"\",\"lls\":\"\",\"tsl\":\"\",\"tile\":\"\",\"http_ts\":\"\",\"ll_hls\":\"\",\"sdk_params\":\"{\\\"VCodec\\\":\\\"h264\\\",\\\"vbitrate\\\":0,\\\"resolution\\\":\\\"\\\",\\\"gop\\\":2,\\\"drType\\\":\\\"sdr\\\"}\",\"enableEncryption\":false}},\"sd\":{\"main\":{\"flv\":\"http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000sd.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=9455b3092374b8471eb009cbb1384346\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_Stage0T000sd\",\"hls\":\"http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000sd.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=e414e490d5eab2dba208e6aa5096617c\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\",\"cmaf\":\"\",\"dash\":\"\",\"lls\":\"http://pull-lls-l11.douyincdn.com/stage/stream-694656385925775505_Stage0T000sd.sdp?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=d41c22227a790352b88cab78f135d73b\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_lls_Stage0T000sd\",\"tsl\":\"\",\"tile\":\"\",\"http_ts\":\"\",\"ll_hls\":\"\",\"sdk_params\":\"{\\\"VCodec\\\":\\\"h264\\\",\\\"vbitrate\\\":1500000,\\\"resolution\\\":\\\"540x952\\\",\\\"gop\\\":2,\\\"drType\\\":\\\"sdr\\\",\\\"fps\\\":15}\",\"enableEncryption\":false}},\"md\":{\"main\":{\"flv\":\"https://pull-flv-l11-admin.douyincdn.com/stage/stream-694656385925775505_md.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=c6944043e114714e54fc6a1fd4b99a50\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_md\",\"hls\":\"http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_md.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=c8686fd3d6a88cdf2375e0748c9cb3e0\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\",\"cmaf\":\"\",\"dash\":\"\",\"lls\":\"http://pull-lls-l11.douyincdn.com/stage/stream-694656385925775505_md.sdp?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=27f51420f7c3c9f44b5c30cf67c3c11e\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_lls_md\",\"tsl\":\"\",\"tile\":\"\",\"http_ts\":\"\",\"ll_hls\":\"\",\"sdk_params\":\"{\\\"VCodec\\\":\\\"h264\\\",\\\"vbitrate\\\":250000,\\\"resolution\\\":\\\"240x423\\\",\\\"gop\\\":2,\\\"drType\\\":\\\"sdr\\\",\\\"fps\\\":15}\",\"enableEncryption\":false}},\"origin\":{\"main\":{\"flv\":\"http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_or4.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=6e28f956c9056dd278c1b4c858888de6\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_or4\",\"hls\":\"http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_or4.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=9940c09b665623738a8fa0ec4e4362af\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\",\"cmaf\":\"\",\"dash\":\"\",\"lls\":\"http://pull-lls-l11.douyincdn.com/stage/stream-694656385925775505_or4.sdp?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=90d74e37a79c014f57272bd9c7765247\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_lls_or4\",\"tsl\":\"\",\"tile\":\"\",\"http_ts\":\"\",\"ll_hls\":\"\",\"sdk_params\":\"{\\\"VCodec\\\":\\\"h264\\\",\\\"vbitrate\\\":3145000,\\\"resolution\\\":\\\"1088x1920\\\",\\\"gop\\\":2,\\\"drType\\\":\\\"sdr\\\"}\",\"enableEncryption\":false}},\"hd\":{\"main\":{\"flv\":\"http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_hd.flv?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=f50472ff3407149e3a99d61e398f990d\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_flv_hd\",\"hls\":\"http://pull-hls-l11.douyincdn.com/stage/stream-694656385925775505_hd.m3u8?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=ecb783056fd60ce33ac80bd4f049d50f\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\",\"cmaf\":\"\",\"dash\":\"\",\"lls\":\"http://pull-lls-l11.douyincdn.com/stage/stream-694656385925775505_hd.sdp?arch_hrchy=w1\u0026exp_hrchy=w1\u0026expire=1761861642\u0026major_anchor_level=common\u0026sign=aec1571913694e4208ed676e30251d69\u0026t_id=037-2025102406004288779862B5C83F50754A-2TKLNb\u0026unique_id=stream-694656385925775505_145_lls_hd\",\"tsl\":\"\",\"tile\":\"\",\"http_ts\":\"\",\"ll_hls\":\"\",\"sdk_params\":\"{\\\"VCodec\\\":\\\"h264\\\",\\\"vbitrate\\\":2000000,\\\"resolution\\\":\\\"720x1270\\\",\\\"gop\\\":2,\\\"drType\\\":\\\"sdr\\\",\\\"fps\\\":30}\",\"enableEncryption\":false}}}}"
+                        }
+                    },
+                    "extra": {
+                        "height": 1920,
+                        "width": 1088,
+                        "fps": 0,
+                        "max_bitrate": 0,
+                        "min_bitrate": 0,
+                        "default_bitrate": 0,
+                        "bitrate_adapt_strategy": 0,
+                        "anchor_interact_profile": 0,
+                        "audience_interact_profile": 0,
+                        "hardware_encode": false,
+                        "video_profile": 0,
+                        "h265_enable": false,
+                        "gop_sec": 0,
+                        "bframe_enable": false,
+                        "roi": false,
+                        "sw_roi": false,
+                        "bytevc1_enable": false
+                    },
+                    "pull_datas": {}
+                },
+                "mosaic_status": 0,
+                "mosaic_status_str": "0",
+                "admin_user_ids": [
+                    189573712315133,
+                    99423263739,
+                    98367538631,
+                    1876207597264451,
+                    68078947134,
+                    1543359989294094,
+                    59524764587,
+                    73208655073
+                ],
+                "admin_user_ids_str": [
+                    "189573712315133",
+                    "99423263739",
+                    "98367538631",
+                    "1876207597264451",
+                    "68078947134",
+                    "1543359989294094",
+                    "59524764587",
+                    "73208655073"
+                ],
+                "owner": {
+                    "id_str": "93778703014",
+                    "sec_uid": "MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg",
+                    "nickname": "是芹菜菜菜🥬",
+                    "avatar_thumb": {
+                        "url_list": [
+                            "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_5511fc79307b9adca03f1b2924ecf754.jpeg?from=3067671334",
+                            "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_5511fc79307b9adca03f1b2924ecf754.jpeg?from=3067671334",
+                            "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_5511fc79307b9adca03f1b2924ecf754.jpeg?from=3067671334"
+                        ]
+                    },
+                    "follow_info": {
+                        "follow_status": 0,
+                        "follow_status_str": "0"
+                    },
+                    "subscribe": {
+                        "is_member": false,
+                        "level": 0,
+                        "identity_type": 0,
+                        "buy_type": 0,
+                        "open": 1
+                    },
+                    "foreign_user": 0,
+                    "open_id_str": ""
+                },
+                "room_auth": {
+                    "Chat": true,
+                    "Danmaku": false,
+                    "Gift": true,
+                    "LuckMoney": true,
+                    "Digg": true,
+                    "RoomContributor": true,
+                    "Props": true,
+                    "UserCard": true,
+                    "POI": true,
+                    "MoreAnchor": 1,
+                    "Banner": 1,
+                    "Share": 1,
+                    "UserCorner": 0,
+                    "Landscape": 1,
+                    "LandscapeChat": 1,
+                    "PublicScreen": 1,
+                    "GiftAnchorMt": 0,
+                    "RecordScreen": 2,
+                    "DonationSticker": 0,
+                    "HourRank": 0,
+                    "CommerceCard": 1,
+                    "AudioChat": 1,
+                    "DanmakuDefault": 0,
+                    "KtvOrderSong": 2,
+                    "SelectionAlbum": 2,
+                    "Like": 0,
+                    "MultiplierPlayback": 0,
+                    "DownloadVideo": 0,
+                    "Collect": 2,
+                    "TimedShutdown": 0,
+                    "Seek": 0,
+                    "Denounce": 0,
+                    "Dislike": 0,
+                    "OnlyTa": 0,
+                    "CastScreen": 1,
+                    "CommentWall": 1,
+                    "BulletStyle": 0,
+                    "ShowGamePlugin": 2,
+                    "VSGift": 0,
+                    "VSTopic": 0,
+                    "VSRank": 0,
+                    "AdminCommentWall": 0,
+                    "CommerceComponent": 1,
+                    "DouPlus": 1,
+                    "GamePointsPlaying": 2,
+                    "Poster": 2,
+                    "Highlights": 2,
+                    "TypingCommentState": 1,
+                    "StrokeUpDownGuide": 1,
+                    "UpRightStatsFloatingLayer": 1,
+                    "CastScreenExplicit": 2,
+                    "Selection": 2,
+                    "IndustryService": 0,
+                    "VerticalRank": 1,
+                    "EnterEffects": 0,
+                    "FansClub": 1,
+                    "EmojiOutside": 0,
+                    "CanSellTicket": 0,
+                    "DouPlusPopularityGem": 0,
+                    "MissionCenter": 0,
+                    "ExpandScreen": 2,
+                    "FansGroup": 2,
+                    "Topic": 2,
+                    "AnchorMission": 0,
+                    "Teleprompter": 0,
+                    "LongTouch": 2,
+                    "FirstFeedHistChat": 1,
+                    "MoreHistChat": 1,
+                    "TaskBanner": 0,
+                    "SpecialStyle": {
+                        "Chat": {
+                            "UnableStyle": 0,
+                            "Content": "主播已设置所有人可评论",
+                            "OffType": 0,
+                            "AnchorSwitchForPaidLive": 0,
+                            "ContentForPaidLive": ""
+                        },
+                        "Like": {
+                            "UnableStyle": 0,
+                            "Content": "",
+                            "OffType": 0,
+                            "AnchorSwitchForPaidLive": 0,
+                            "ContentForPaidLive": ""
+                        }
+                    },
+                    "FixedChat": 2,
+                    "QuizGamePointsPlaying": 2
+                },
+                "live_room_mode": 0,
+                "stats": {
+                    "total_user_desp": "",
+                    "like_count": 0,
+                    "total_user_str": "4603",
+                    "user_count_str": "54"
+                },
+                "has_commerce_goods": true,
+                "linker_map": {},
+                "linker_detail": {
+                    "linker_play_modes": [
+                        21
+                    ],
+                    "big_party_layout_config_version": 0,
+                    "accept_audience_pre_apply": true,
+                    "linker_ui_layout": 0,
+                    "enable_audience_linkmic": 0,
+                    "function_type": "",
+                    "linker_map_str": {},
+                    "ktv_lyric_mode": "",
+                    "init_source": "",
+                    "forbid_apply_from_other": false,
+                    "ktv_exhibit_mode": 0,
+                    "enlarge_guest_turn_on_source": 0,
+                    "playmode_detail": {},
+                    "client_ui_info": "",
+                    "manual_open_ui": 0,
+                    "feature_list": []
+                },
+                "room_view_stats": {
+                    "is_hidden": false,
+                    "display_short": "54",
+                    "display_middle": "54",
+                    "display_long": "54在线观众",
+                    "display_value": 54,
+                    "display_version": 1663849727,
+                    "incremental": false,
+                    "display_type": 1,
+                    "display_short_anchor": "54",
+                    "display_middle_anchor": "54",
+                    "display_long_anchor": "54在线观众"
+                },
+                "scene_type_info": {
+                    "is_union_live_room": false,
+                    "is_life": false,
+                    "is_protected_room": 0,
+                    "is_lasted_goods_room": 2,
+                    "is_desire_room": 2,
+                    "commentary_type": false,
+                    "is_sub_orientation_vertical_room": 2
+                },
+                "toolbar_data": {
+                    "entrance_list": [
+                        {
+                            "group_id": 5,
+                            "component_type": 24,
+                            "op_type": 0,
+                            "text": "更多",
+                            "schema_url": "",
+                            "show_type": 1,
+                            "data_status": 1,
+                            "extra": ""
+                        },
+                        {
+                            "group_id": 6,
+                            "component_type": 29,
+                            "op_type": 0,
+                            "text": "快捷送礼",
+                            "schema_url": "",
+                            "icon": {
+                                "url_list": [
+                                    "https://p3-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-resize:0:0.image",
+                                    "https://p11-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-resize:0:0.image"
+                                ],
+                                "uri": "webcast/7ef47758a435313180e6b78b056dda4e.png",
+                                "height": 0,
+                                "width": 0,
+                                "avg_color": "#CEE5EB",
+                                "image_type": 0,
+                                "open_web_url": "",
+                                "is_animated": false,
+                                "flex_setting_list": [],
+                                "text_setting_list": []
+                            },
+                            "show_type": 3,
+                            "data_status": 1,
+                            "extra": "{\"id\":463,\"name\":\"小心心\",\"type\":1,\"diamond_count\":1,\"combo\":true,\"image\":{\"url_list\":[\"https://p11-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-obj.image\",\"https://p3-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-obj.image\"],\"uri\":\"webcast/7ef47758a435313180e6b78b056dda4e.png\",\"avg_color\":\"#FFEBF8\"},\"webp_image\":{\"url_list\":[\"https://p11-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-obj.webp\",\"https://p3-webcast.douyinpic.com/img/webcast/7ef47758a435313180e6b78b056dda4e.png~tplv-obj.webp\"],\"uri\":\"webcast/7ef47758a435313180e6b78b056dda4e.png\",\"avg_color\":\"#524937\"}}"
+                        },
+                        {
+                            "group_id": 7,
+                            "component_type": 26,
+                            "op_type": 0,
+                            "text": "连线",
+                            "schema_url": "",
+                            "show_type": 3,
+                            "data_status": 1,
+                            "extra": ""
+                        },
+                        {
+                            "group_id": 8,
+                            "component_type": 28,
+                            "op_type": 0,
+                            "text": "礼物",
+                            "schema_url": "",
+                            "icon": {
+                                "url_list": [
+                                    "https://p3-webcast.douyinpic.com/img/webcast/profit_gift_entrance_ab_v2.webp~tplv-resize:0:0.image",
+                                    "https://p11-webcast.douyinpic.com/img/webcast/profit_gift_entrance_ab_v2.webp~tplv-resize:0:0.image"
+                                ],
+                                "uri": "webcast/profit_gift_entrance_ab_v2.webp",
+                                "height": 0,
+                                "width": 0,
+                                "avg_color": "#C8E0BC",
+                                "image_type": 0,
+                                "open_web_url": "",
+                                "is_animated": false,
+                                "flex_setting_list": [],
+                                "text_setting_list": []
+                            },
+                            "show_type": 3,
+                            "data_status": 1,
+                            "extra": ""
+                        },
+                        {
+                            "group_id": 12,
+                            "component_type": 35,
+                            "op_type": 0,
+                            "text": "清晰度",
+                            "schema_url": "",
+                            "show_type": 2,
+                            "data_status": 1,
+                            "extra": ""
+                        }
+                    ],
+                    "more_panel": [
+                        {
+                            "group_id": 1,
+                            "component_type": 20,
+                            "op_type": 0,
+                            "text": "分享",
+                            "schema_url": "",
+                            "show_type": 1,
+                            "data_status": 1,
+                            "extra": "{\"ShareStory\":1}"
+                        },
+                        {
+                            "group_id": 10,
+                            "component_type": 31,
+                            "op_type": 0,
+                            "text": "聊天频道",
+                            "schema_url": "",
+                            "show_type": 1,
+                            "data_status": 1,
+                            "extra": ""
+                        }
+                    ],
+                    "max_entrance_cnt": 4,
+                    "landscape_up_right": [],
+                    "skin_resource": {},
+                    "max_entrance_cnt_landscape": 4,
+                    "permutation": {
+                        "general": {
+                            "GroupPriority": [
+                                18,
+                                17,
+                                12,
+                                14,
+                                16,
+                                5,
+                                1,
+                                8,
+                                4,
+                                15,
+                                10,
+                                13,
+                                0,
+                                19,
+                                9,
+                                3,
+                                2,
+                                7,
+                                6
+                            ],
+                            "ComponentSequence": [
+                                31,
+                                33,
+                                34,
+                                37,
+                                35,
+                                38,
+                                36,
+                                26,
+                                42,
+                                23,
+                                27,
+                                32,
+                                21,
+                                2,
+                                3,
+                                1,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                22,
+                                30,
+                                25,
+                                41,
+                                29,
+                                28,
+                                20,
+                                24
+                            ]
+                        },
+                        "on_demand_component_list": [],
+                        "block_component_list": []
+                    },
+                    "extra_info": {
+                        "game_promotion_coexist": 0
+                    }
+                },
+                "ecom_data": {
+                    "reds_show_infos": [],
+                    "instant_type": 0,
+                    "route_rule": ""
+                },
+                "room_cart": {
+                    "contain_cart": false,
+                    "total": 0,
+                    "flash_total": 0,
+                    "cart_icon": "",
+                    "show_cart": 0
+                },
+                "AnchorABMap": {
+                    "ab_admin_comment_on_wall": "0",
+                    "ab_friend_chat": "4",
+                    "admin_optimize_third": "1",
+                    "admin_pin_ab_group": "1",
+                    "admin_privilege_refine": "2",
+                    "admin_screen_chat_value": "1",
+                    "ai_container": "1",
+                    "allow_join_guest_fansclub": "1",
+                    "allow_shared_to_fans": "false",
+                    "anchor_other_device": "1",
+                    "audience_linkmic_continue": "2",
+                    "audio_1v8_stage_enlarge": "1",
+                    "audio_double_enlarge_enable": "1",
+                    "audio_radio_v2": "1",
+                    "audio_room_subtitle_opt": "3",
+                    "audio_subtitle_default_open": "2",
+                    "battle_match_rebuild_anchor": "2",
+                    "big_party_enable_open_camera": "2",
+                    "chat_intercommunicate_multi_anchor": "2",
+                    "chat_intercommunicate_pk": "2",
+                    "cold_start": "1",
+                    "cross_default_enlarge": "1",
+                    "cross_link_support_enlarge_guest": "1",
+                    "cross_room_battle_pop_mode": "1",
+                    "double_enlarge_enable": "1",
+                    "ecom_room_disable_gift": "0",
+                    "enable_enter_by_sharing": "2",
+                    "enable_link_guest_enter": "2",
+                    "enter_message_tip_relation": "0",
+                    "enter_source_mark": "0",
+                    "featured_public_screen_ab_value": "2",
+                    "frequently_chat_ab_value": "2",
+                    "friend_room_audio_tuning": "1",
+                    "friend_room_support_ns_mode": "0",
+                    "friend_share_video_feature_type": "3",
+                    "game_link_entrance": "1",
+                    "gift_comment": "1",
+                    "gift_hide_tip": "2",
+                    "guest_battle_1v6_anchor_involved": "1",
+                    "guest_battle_crown_upgrade": "4",
+                    "guest_battle_expand": "2",
+                    "guest_battle_score_expand": "2",
+                    "guest_battle_upgrade": "2",
+                    "interact_acting_ab": "1",
+                    "interact_anchor_guide": "0",
+                    "ktv_aigc_mv": "1",
+                    "ktv_anchor_enable_add_all": "1",
+                    "ktv_atmosphere_video": "2",
+                    "ktv_auto_mute_self": "1",
+                    "ktv_challenge_minus_gift": "1",
+                    "ktv_component_auto_open": "2",
+                    "ktv_component_new_midi": "3",
+                    "ktv_enable_avatar": "2",
+                    "ktv_enable_open_camera": "2",
+                    "ktv_fragment_song": "1",
+                    "ktv_grab_guide_song": "0",
+                    "ktv_guide_song_switch": "0",
+                    "ktv_kick_when_linker_full": "1",
+                    "ktv_mc_host_show_tag": "2",
+                    "ktv_midi_score": "1",
+                    "ktv_midi_sense_enhance": "1",
+                    "ktv_new_challenge": "1",
+                    "ktv_new_mv": "1",
+                    "ktv_order_chain_opt": "1",
+                    "ktv_profit_dress_bg": "1",
+                    "ktv_room_atmosphere": "1",
+                    "ktv_singing_hot_rank": "1",
+                    "ktv_video_stream_optimize": "1",
+                    "ktv_want_listen_enable": "2",
+                    "lead_real_time_chorus": "2",
+                    "link_efficiency": "1",
+                    "linkmic_multi_chorus": "2",
+                    "linkmic_order_sing_ai_mv": "0",
+                    "linkmic_order_sing_search_fingerprint": "1",
+                    "linkmic_order_sing_upgrade": "1",
+                    "linkmic_starwish": "1",
+                    "linkmic_starwish_gift": "true",
+                    "linkmic_video_equal_layout_frame_opt": "1",
+                    "live_anchor_enable_chorus": "false",
+                    "live_anchor_enable_custom_position": "1",
+                    "live_anchor_flow_feedback_enable": "1",
+                    "live_anchor_hit_new_audience_linkmic": "2",
+                    "live_anchor_hit_position_opt": "2",
+                    "live_anchor_hit_video_bid_paid": "2",
+                    "live_anchor_hit_video_teamfight": "2",
+                    "live_anchor_new_replay_record_enable": "1",
+                    "live_answer_on_wall": "1",
+                    "live_audience_linkmic_pre_apply": "1",
+                    "live_audience_linkmic_pre_apply_v2": "1",
+                    "live_audio_enable_c_position": "2",
+                    "live_chat_streamline": "2",
+                    "live_chatroom_announce_image_enable": "true",
+                    "live_dou_plus_enter": "1",
+                    "live_invite_panel_opt": "2",
+                    "live_ktv_enable_beat": "0",
+                    "live_ktv_group": "2",
+                    "live_ktv_show_singer_icon": "1",
+                    "live_ktv_singing_challenge": "1",
+                    "live_linkmic_battle_optimize": "1",
+                    "live_linkmic_ktv_anchor_lyric_mode": "0",
+                    "live_linkmic_order_sing_custom_gift": "2",
+                    "live_linkmic_order_sing_micro_opt": "3",
+                    "live_linkmic_order_sing_new": "1",
+                    "live_linkmic_order_sing_v3": "2",
+                    "live_pc_helper_new_layout": "0",
+                    "live_room_manage_style": "0",
+                    "live_team_fight_flexible": "1",
+                    "live_video_enable_c_position": "2",
+                    "live_video_enable_self_discipline": "2",
+                    "live_video_host_identity_enable": "2",
+                    "live_video_on_wall": "1",
+                    "live_video_share": "2",
+                    "lonely_room_enter_msg_unfold": "0",
+                    "mark_user": "1",
+                    "merge_ktv_mode_enable": "1",
+                    "merge_ktv_optimize_enable": "2",
+                    "opt_audience_linkmic": "3",
+                    "opt_paid_link_feature_switch": "1",
+                    "optran_paid_linkmic": "2",
+                    "order_sing_aigcmv": "1",
+                    "order_sing_mv": "1",
+                    "order_singer_rank": "2",
+                    "play_mode_opt_24": "1",
+                    "preview_tickle_user": "1",
+                    "ps_use_new_panel": "1",
+                    "public_area_helper_ab_value": "3",
+                    "radio_paid_linkmic": "2",
+                    "radio_prepare_apply": "0",
+                    "real_time_chorus": "1",
+                    "real_time_chorus_gift": "2",
+                    "room_battle_compose_message": "1",
+                    "room_battle_mode_switch": "2",
+                    "room_battle_mode_switch_audio": "3",
+                    "room_battle_video_audio_interconnection": "1",
+                    "room_double_like": "2",
+                    "room_secret_chat": "1",
+                    "search_user_entry_enable": "1",
+                    "self_discipline_name": "1",
+                    "self_discipline_v2": "1",
+                    "self_discipline_v3": "1",
+                    "social_share_video_adjust_volume": "2",
+                    "specified_guests_pk": "1",
+                    "support_multiple_add_price": "1",
+                    "themed_competition": "1",
+                    "themed_competition_v2": "1",
+                    "traffic_strategy": "3",
+                    "video_equal_1v8fix_switch": "1",
+                    "video_ktv_challenge": "1",
+                    "video_real_time_chorus": "1",
+                    "video_talk_enable_avatar": "2",
+                    "vip_elaborate": "1",
+                    "webcast_chat_model": "1"
+                },
+                "like_count": 11074,
+                "owner_user_id_str": "",
+                "paid_live_data": {
+                    "paid_type": 0,
+                    "view_right": 0,
+                    "duration": 0,
+                    "delivery": 0,
+                    "need_delivery_notice": false,
+                    "anchor_right": 0,
+                    "pay_ab_type": 0,
+                    "privilege_info": {},
+                    "privilege_info_map": {},
+                    "max_preview_duration": 0
+                },
+                "basis": {
+                    "next_ping": 300,
+                    "is_customize_audio_room": false,
+                    "need_request_luckybox": 0,
+                    "secret_room": 0,
+                    "foreign_user_room": 0
+                },
+                "game_data": {
+                    "game_tag_info": {
+                        "is_game": 2,
+                        "game_tag_id": 0,
+                        "game_tag_name": ""
+                    }
+                },
+                "short_touch_area_config": {
+                    "elements": {
+                        "1": {
+                            "type": 1,
+                            "priority": 1
+                        },
+                        "2": {
+                            "type": 2,
+                            "priority": 1
+                        },
+                        "3": {
+                            "type": 3,
+                            "priority": 1
+                        },
+                        "4": {
+                            "type": 4,
+                            "priority": 3
+                        },
+                        "5": {
+                            "type": 5,
+                            "priority": 4
+                        },
+                        "6": {
+                            "type": 6,
+                            "priority": 3
+                        },
+                        "7": {
+                            "type": 7,
+                            "priority": 3
+                        },
+                        "8": {
+                            "type": 8,
+                            "priority": 3
+                        },
+                        "9": {
+                            "type": 9,
+                            "priority": 3
+                        },
+                        "10": {
+                            "type": 10,
+                            "priority": 3
+                        },
+                        "12": {
+                            "type": 12,
+                            "priority": 3
+                        },
+                        "22": {
+                            "type": 22,
+                            "priority": 1
+                        },
+                        "27": {
+                            "type": 27,
+                            "priority": 3
+                        },
+                        "30": {
+                            "type": 30,
+                            "priority": 2
+                        }
+                    },
+                    "forbidden_types_map": {},
+                    "temp_state_condition_map": {
+                        "1": {
+                            "type": {
+                                "strategy_type": 1,
+                                "priority": 30
+                            },
+                            "minimum_gap": 900
+                        },
+                        "2": {
+                            "type": {
+                                "strategy_type": 2,
+                                "priority": 20
+                            },
+                            "minimum_gap": 900
+                        },
+                        "3": {
+                            "type": {
+                                "strategy_type": 3,
+                                "priority": 10
+                            },
+                            "minimum_gap": 900
+                        },
+                        "4": {
+                            "type": {
+                                "strategy_type": 4,
+                                "priority": 1
+                            },
+                            "minimum_gap": 0
+                        },
+                        "5": {
+                            "type": {
+                                "strategy_type": 5,
+                                "priority": 5
+                            },
+                            "minimum_gap": 0
+                        },
+                        "6": {
+                            "type": {
+                                "strategy_type": 6,
+                                "priority": 7
+                            },
+                            "minimum_gap": 0
+                        },
+                        "7": {
+                            "type": {
+                                "strategy_type": 7,
+                                "priority": 6
+                            },
+                            "minimum_gap": 0
+                        }
+                    },
+                    "temp_state_strategy": {
+                        "4": {
+                            "short_touch_type": 4,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "6": {
+                                    "type": {
+                                        "strategy_type": 6,
+                                        "priority": 7
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "7": {
+                                    "type": {
+                                        "strategy_type": 7,
+                                        "priority": 6
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "7": {
+                            "short_touch_type": 7,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "4": {
+                                    "type": {
+                                        "strategy_type": 4,
+                                        "priority": 1
+                                    },
+                                    "duration": 0,
+                                    "strategy_method": ""
+                                },
+                                "5": {
+                                    "type": {
+                                        "strategy_type": 5,
+                                        "priority": 5
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "6": {
+                                    "type": {
+                                        "strategy_type": 6,
+                                        "priority": 7
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "8": {
+                            "short_touch_type": 8,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "97": {
+                            "short_touch_type": 97,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "5": {
+                                    "type": {
+                                        "strategy_type": 5,
+                                        "priority": 5
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": "short_touch_tempstate_redpack_entry_type"
+                                },
+                                "6": {
+                                    "type": {
+                                        "strategy_type": 6,
+                                        "priority": 7
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": "short_touch_tempstate_redpack_match_amunt"
+                                },
+                                "7": {
+                                    "type": {
+                                        "strategy_type": 7,
+                                        "priority": 6
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": "short_touch_tempstate_redpack_user_wish_tobuy"
+                                }
+                            }
+                        },
+                        "136": {
+                            "short_touch_type": 136,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "141": {
+                            "short_touch_type": 141,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "149": {
+                            "short_touch_type": 149,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "152": {
+                            "short_touch_type": 152,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "153": {
+                            "short_touch_type": 153,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                },
+                                "4": {
+                                    "type": {
+                                        "strategy_type": 4,
+                                        "priority": 1
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "159": {
+                            "short_touch_type": 159,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "161": {
+                            "short_touch_type": 161,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                },
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "210": {
+                            "short_touch_type": 210,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "217": {
+                            "short_touch_type": 217,
+                            "strategy_map": {
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 15,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "222": {
+                            "short_touch_type": 222,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 5,
+                                    "strategy_method": "结束态"
+                                }
+                            }
+                        },
+                        "306": {
+                            "short_touch_type": 306,
+                            "strategy_map": {
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": "test_temp_30"
+                                }
+                            }
+                        },
+                        "307": {
+                            "short_touch_type": 307,
+                            "strategy_map": {
+                                "4": {
+                                    "type": {
+                                        "strategy_type": 4,
+                                        "priority": 1
+                                    },
+                                    "duration": 15,
+                                    "strategy_method": "test_strategy_5"
+                                }
+                            }
+                        },
+                        "308": {
+                            "short_touch_type": 308,
+                            "strategy_map": {
+                                "5": {
+                                    "type": {
+                                        "strategy_type": 5,
+                                        "priority": 5
+                                    },
+                                    "duration": 10,
+                                    "strategy_method": "test_strategy_5"
+                                }
+                            }
+                        },
+                        "311": {
+                            "short_touch_type": 311,
+                            "strategy_map": {
+                                "3": {
+                                    "type": {
+                                        "strategy_type": 3,
+                                        "priority": 10
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "312": {
+                            "short_touch_type": 312,
+                            "strategy_map": {
+                                "1": {
+                                    "type": {
+                                        "strategy_type": 1,
+                                        "priority": 30
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": ""
+                                }
+                            }
+                        },
+                        "313": {
+                            "short_touch_type": 313,
+                            "strategy_map": {
+                                "2": {
+                                    "type": {
+                                        "strategy_type": 2,
+                                        "priority": 20
+                                    },
+                                    "duration": 30,
+                                    "strategy_method": "test_strategy_2"
+                                }
+                            }
+                        }
+                    },
+                    "strategy_feat_whitelist": [
+                        "feat_coin_lottery_amount",
+                        "feat_redpack_amount",
+                        "live_short_touch_ecom_redpack_type",
+                        "live_short_touch_ecom_redpack_sub_type",
+                        "live_short_touch_ecom_redpack_total_amount",
+                        "live_short_touch_ecom_redpack_total_stock",
+                        "live_ecom_cart_click_twice",
+                        "live_ecom_cart_stop_buy",
+                        "live_watch_6_min"
+                    ],
+                    "temp_state_global_condition": {
+                        "duration_gap": 300,
+                        "allow_count": 1,
+                        "ignore_strategy_types": [
+                            4
+                        ]
+                    }
+                },
+                "req_user": {
+                    "user_share_room_score": 0,
+                    "enter_user_device_type": 0
+                },
+                "others": {
+                    "deco_detail": {
+                        "text_decoration": {
+                            "id": 1187,
+                            "image": {
+                                "url_list": [
+                                    "https://p11-webcast.douyinpic.com/img/webcast/decoration_13e86f8bfb4c405e3d59fb75b80851ad.png~tplv-resize:0:0.image",
+                                    "https://p3-webcast.douyinpic.com/img/webcast/decoration_13e86f8bfb4c405e3d59fb75b80851ad.png~tplv-resize:0:0.image"
+                                ],
+                                "uri": "webcast/decoration_13e86f8bfb4c405e3d59fb75b80851ad.png",
+                                "height": 0,
+                                "width": 0,
+                                "avg_color": "#CCB1A3",
+                                "image_type": 0,
+                                "open_web_url": "",
+                                "is_animated": false,
+                                "flex_setting_list": [],
+                                "text_setting_list": []
+                            },
+                            "type": 1,
+                            "input_rect": [
+                                63,
+                                43,
+                                195,
+                                34
+                            ],
+                            "text_size": 25,
+                            "text_color": "#FFFFFF",
+                            "content": "占个千票榜吧",
+                            "max_length": 8,
+                            "status": 1,
+                            "h": 2796,
+                            "x": 1050,
+                            "w": 1290,
+                            "y": 1011,
+                            "kind": 0,
+                            "sub_type": 0,
+                            "nine_patch_image": {
+                                "url_list": [
+                                    "https://p3-webcast.douyinpic.com/img/webcast/decoration_3e4ff163c79351791eb5c029a49bbc49.png~tplv-obj.image",
+                                    "https://p11-webcast.douyinpic.com/img/webcast/decoration_3e4ff163c79351791eb5c029a49bbc49.png~tplv-obj.image"
+                                ],
+                                "uri": "webcast/decoration_3e4ff163c79351791eb5c029a49bbc49.png",
+                                "height": 0,
+                                "width": 0,
+                                "avg_color": "#53537A",
+                                "image_type": 0,
+                                "open_web_url": "",
+                                "is_animated": false,
+                                "flex_setting_list": [],
+                                "text_setting_list": []
+                            },
+                            "text_special_effects": [],
+                            "text_image_adjustable_start_position": 132,
+                            "text_image_adjustable_end_position": 212,
+                            "audit_text_color": ""
+                        }
+                    },
+                    "more_panel_info": {
+                        "load_strategy": 3
+                    },
+                    "appointment_info": {
+                        "appointment_id": 0,
+                        "is_subscribe": false
+                    },
+                    "web_skin": {
+                        "enable_skin": false
+                    },
+                    "programme": {
+                        "enable_programme": false
+                    },
+                    "web_live_port_optimization": {
+                        "strategy_config": {
+                            "background": {
+                                "strategy_type": 1,
+                                "use_config_duration": false,
+                                "pause_monitor_duration": "1800"
+                            },
+                            "detail": {
+                                "strategy_type": 1,
+                                "use_config_duration": false,
+                                "pause_monitor_duration": "1800"
+                            },
+                            "tab": {
+                                "strategy_type": 1,
+                                "use_config_duration": false,
+                                "pause_monitor_duration": "1800"
+                            }
+                        },
+                        "strategy_extra": ""
+                    },
+                    "lvideo_item_id": 0,
+                    "recognition_containers": {
+                        "recognition_candidates": []
+                    },
+                    "anchor_together_live": {
+                        "is_together_live": 0,
+                        "user_list": [],
+                        "title": "",
+                        "schema_url": "",
+                        "scene": 1,
+                        "is_show": false
+                    },
+                    "mosaic_version": 0,
+                    "metric_tracker_data_list": [],
+                    "cloud_collaborate_data": {
+                        "collaborate_room_id": 0,
+                        "collaborate_room_id_str": "",
+                        "rejoin_time": 0
+                    },
+                    "room_chat_guide_locale_city": "台湾"
+                },
+                "admin_user_open_ids": [],
+                "admin_user_open_ids_str": [],
+                "owner_open_id_str": ""
+            }
+        ],
+        "enter_room_id": "7564520129317358371",
+        "extra": {
+            "digg_color": "0",
+            "pay_scores": "0",
+            "is_official_channel": false,
+            "signature": ""
+        },
+        "user": {
+            "id_str": "93778703014",
+            "sec_uid": "MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg",
+            "nickname": "是芹菜菜菜🥬",
+            "avatar_thumb": {
+                "url_list": [
+                    "https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_5511fc79307b9adca03f1b2924ecf754.jpeg?from=3067671334",
+                    "https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_5511fc79307b9adca03f1b2924ecf754.jpeg?from=3067671334",
+                    "https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_5511fc79307b9adca03f1b2924ecf754.jpeg?from=3067671334"
+                ]
+            },
+            "follow_info": {
+                "follow_status": 0,
+                "follow_status_str": "0"
+            },
+            "foreign_user": 0,
+            "open_id_str": ""
+        },
+        "qrcode_url": "https://p3-pc.douyinpic.com/img/aweme-qrcode/pSnPxd7564520750636402472~c5_720x720.webp?from=746027608",
+        "enter_mode": 0,
+        "room_status": 0,
+        "partition_road_map": {},
+        "similar_rooms": [],
+        "shark_decision_conf": "",
+        "web_stream_url": {
+            "flv_pull_url": {},
+            "default_resolution": "",
+            "hls_pull_url_map": {},
+            "hls_pull_url": "",
+            "stream_orientation": 0,
+            "pull_datas": {}
+        },
+        "login_lead": {
+            "is_login": false,
+            "level": 0,
+            "items": {}
+        },
+        "auth_cert_info": "{\"CertDataMap\":{\"93778703014\":{\"CertLabelList\":[],\"DataMap\":{}}},\"BaseResp\":{\"StatusMessage\":\"\",\"StatusCode\":0}}"
+    },
+    "extra": {
+        "now": 1761256842976
+    },
+    "status_code": 0
 }
 
-adblock();...
 
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=0&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&a_bogus=E6U5gz6JOpQRPdMSmCnkSCQUJXoArsujAeiKSbHuHxOLOhzP7SNEFPGYroFrsxc7A8Bhio3H1xFlYddczoXi1A9kzmpDuwz6S4C5V6vo0ZJ1YBihIqfOCsboFJiOA5SEK%2F1Jxl7IUU8cZEQUwqd08d57F%2FULQOYpWi9hfO6Gx1wD6bs9Jf%3D%3D
 
-[可能 API] https://lf3-config.bytetcc.com/obj/tcc-config-web/tcc-v2-data-webcast.douyin.live_pc-default
-[Response JSON]: {"data":{"activity_indicator":"{\"enable\":true,\"whiteList\":[2616082,2616085,2616086,2616075,2616080,2616089,2617808,2614163,2614162],\"ppe_douyin_pc_frontend\":{\"enable\":true,\"whiteList\":[],\"channel\":\"test\"}}","agc_anchor_list":"[\n    \"59082583234\",\n    \"94791369468\",\n    \"1726708946574728\",\n    \"831703556292995\",\n    \"2113688317737500\"\n]","asiangame_match_stats":"{\n    \"value\": true\n}","asiangame_match_stats_pollling_time":"{\n    \"value\": 60\n}","asiangame_season_ids":" [\n    \"7274874715469124665\",\n    \"7263358514108797989\",\n    \"7241775515089589305\",\n    \"7246788405739279417\",\n    \"7252219946426455101\",\n    \"7255642645149062181\",\n    \"7255642645141279805\"\n]","audience_config":"{\n    \"audience_status\": true\n}","audio_face_message":"{\n    \"is_open\": 1\n}","back_switch_stream_config":"{\n    \"waitTimer\": 10000\n}","banner":"{\n    \"long_touch\": {\n        \"long_touch_show\": true,\n        \"use_page_url_banner_id\": [1...
+{
+    "data": {
+        "like_icon_info": {
+            "icons": [
+                {
+                    "url_list": [
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_icon_1.png~tplv-resize:96:96.image",
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_icon_1.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_icon_1.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#EBE1CE",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_icon_2.png~tplv-resize:96:96.image",
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_icon_2.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_icon_2.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#374C52",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_icon_3.png~tplv-resize:96:96.image",
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_icon_3.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_icon_3.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#EBD8CE",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_icon_4.png~tplv-resize:96:96.image",
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_icon_4.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_icon_4.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#666666",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_icon_5.png~tplv-resize:96:96.image",
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_icon_5.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_icon_5.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#A3967C",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_gw_01.png~tplv-resize:96:96.image",
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_gw_01.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_gw_01.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#A37C7C",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_gw_02.png~tplv-resize:96:96.image",
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_gw_02.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_gw_02.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#D8EBCE",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                },
+                {
+                    "url_list": [
+                        "https://p3-webcast.douyinpic.com/img/webcast/like_gw_03.png~tplv-resize:96:96.image",
+                        "https://p11-webcast.douyinpic.com/img/webcast/like_gw_03.png~tplv-resize:96:96.image"
+                    ],
+                    "uri": "webcast/like_gw_03.png",
+                    "height": 0,
+                    "width": 0,
+                    "avg_color": "#CCA3A3",
+                    "image_type": 0,
+                    "open_web_url": "",
+                    "is_animated": false,
+                    "flex_setting_list": [],
+                    "text_setting_list": []
+                }
+            ],
+            "emojis": [],
+            "component_related_icons": {}
+        },
+        "chat_image_guide_info": {
+            "images": []
+        },
+        "frequently_chat_info": {
+            "title": "欢迎使用“快捷评论”",
+            "describe_text": "快捷评论是主播及管理员的专属功能，添加评论后，点击可直接填写到输入框，节省打字时间，更快捷发评论互动"
+        },
+        "chat_input_panel": {
+            "carrier_list": [
+                {
+                    "carrier_id": 1,
+                    "carrier_type": 1,
+                    "priority": 600
+                },
+                {
+                    "carrier_id": 2,
+                    "carrier_type": 1,
+                    "priority": 500
+                },
+                {
+                    "carrier_id": 3,
+                    "carrier_type": 1,
+                    "priority": 400
+                },
+                {
+                    "carrier_id": 4,
+                    "carrier_type": 1,
+                    "priority": 300
+                },
+                {
+                    "carrier_id": 5,
+                    "carrier_type": 2,
+                    "priority": 200
+                },
+                {
+                    "carrier_id": 6,
+                    "carrier_type": 2,
+                    "priority": 100
+                },
+                {
+                    "carrier_id": 7,
+                    "carrier_type": 2,
+                    "priority": 250
+                },
+                {
+                    "carrier_id": 8,
+                    "carrier_type": 1,
+                    "priority": 450
+                },
+                {
+                    "carrier_id": 9,
+                    "carrier_type": 2,
+                    "priority": 270
+                }
+            ]
+        },
+        "fusion_emoji_ban_list": {
+            "ban_list": []
+        },
+        "msg_opt_panel": {
+            "item_list": [
+                {
+                    "item_id": 1,
+                    "display_area": 1,
+                    "priority": 1000
+                },
+                {
+                    "item_id": 2,
+                    "display_area": 1,
+                    "priority": 900
+                },
+                {
+                    "item_id": 3,
+                    "display_area": 1,
+                    "priority": 800
+                },
+                {
+                    "item_id": 101,
+                    "display_area": 2,
+                    "priority": 1000
+                },
+                {
+                    "item_id": 102,
+                    "display_area": 2,
+                    "priority": 900
+                },
+                {
+                    "item_id": 103,
+                    "display_area": 2,
+                    "priority": 800
+                },
+                {
+                    "item_id": 104,
+                    "display_area": 2,
+                    "priority": 700
+                },
+                {
+                    "item_id": 105,
+                    "display_area": 2,
+                    "priority": 600
+                },
+                {
+                    "item_id": 106,
+                    "display_area": 2,
+                    "priority": 500
+                },
+                {
+                    "item_id": 201,
+                    "display_area": 3,
+                    "priority": 1000
+                }
+            ]
+        },
+        "ai_clone": {
+            "ai_conv_list": []
+        },
+        "audience_msg_opt_panel": {
+            "item_list": [
+                {
+                    "item_id": 1,
+                    "priority": 1000,
+                    "outside_name": [
+                        "资料卡"
+                    ],
+                    "inside_name": [
+                        "资料卡"
+                    ],
+                    "can_show": true,
+                    "show_outside": true
+                },
+                {
+                    "item_id": 2,
+                    "priority": 900,
+                    "outside_name": [
+                        "喜欢"
+                    ],
+                    "inside_name": [
+                        "喜欢"
+                    ],
+                    "can_show": true,
+                    "show_outside": true
+                },
+                {
+                    "item_id": 3,
+                    "priority": 800,
+                    "outside_name": [
+                        "不喜欢"
+                    ],
+                    "inside_name": [
+                        "不喜欢"
+                    ],
+                    "can_show": true,
+                    "show_outside": true
+                },
+                {
+                    "item_id": 4,
+                    "priority": 700,
+                    "outside_name": [
+                        "@TA",
+                        "回复"
+                    ],
+                    "inside_name": [
+                        "@TA",
+                        "回复"
+                    ],
+                    "can_show": true,
+                    "show_outside": true
+                },
+                {
+                    "item_id": 5,
+                    "priority": 600,
+                    "outside_name": [
+                        "复制"
+                    ],
+                    "inside_name": [
+                        "复制该评论"
+                    ],
+                    "can_show": true,
+                    "show_outside": false
+                },
+                {
+                    "item_id": 99,
+                    "priority": 500,
+                    "outside_name": [
+                        "更多"
+                    ],
+                    "inside_name": [
+                        "更多"
+                    ],
+                    "can_show": true,
+                    "show_outside": true
+                },
+                {
+                    "item_id": 6,
+                    "priority": 400,
+                    "outside_name": [
+                        "举报"
+                    ],
+                    "inside_name": [
+                        "举报"
+                    ],
+                    "can_show": true,
+                    "show_outside": false
+                },
+                {
+                    "item_id": 7,
+                    "priority": 700,
+                    "outside_name": [
+                        "对TA说",
+                        "回复"
+                    ],
+                    "inside_name": [
+                        "对TA说",
+                        "回复"
+                    ],
+                    "can_show": true,
+                    "show_outside": true
+                }
+            ]
+        },
+        "highlight_data": {
+            "pin_highlight_switch": 0
+        }
+    },
+    "extra": {
+        "now": 1761256843831
+    },
+    "status_code": 0
+}
+
+
+{"data":{"short_touch_area":[]},"extra":{"now":1761256843906},"status_code":0}
+
+
+
+{
+    "data": {
+        "top_right": {
+            "container_url": "https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/banner_container_h5_douyin/template/pages/task.html?enable_carousel=true",
+            "banner_list": [
+                {
+                    "id": 123736,
+                    "title": "心愿单-主端",
+                    "image": {
+                        "url_list": [
+                            "https://p3-webcast.douyinpic.com/img/webcast/214325b6b41560e82442ce7fb2054046.png~tplv-obj.image",
+                            "https://p11-webcast.douyinpic.com/img/webcast/214325b6b41560e82442ce7fb2054046.png~tplv-obj.image"
+                        ],
+                        "uri": "webcast/214325b6b41560e82442ce7fb2054046.png",
+                        "height": 0,
+                        "width": 0,
+                        "avg_color": "#7A6D53",
+                        "image_type": 0,
+                        "open_web_url": "",
+                        "is_animated": false,
+                        "flex_setting_list": [],
+                        "text_setting_list": []
+                    },
+                    "height": 72,
+                    "width": 248,
+                    "schema_url": "",
+                    "action_type": 1,
+                    "banner_type": 0,
+                    "priority": 0,
+                    "text": "",
+                    "frame_type": 2,
+                    "extra": "{\"id\":\"wishList\",\"pageUrl\":\"https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/wish_list_banner_douyin/template/pages/index.html\",\"rootId\":\"wishList\",\"scriptSrc\":\"https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/wish_list_banner_douyin/resource/pages/main.665bd8.js?protocol_id=wishList\"}",
+                    "status": 0,
+                    "uid": 0,
+                    "roomid": 0,
+                    "appointment_start_timestamp": 0,
+                    "appointment_end_timestamp": 0,
+                    "appointment_id": 0,
+                    "tracking_type": [],
+                    "open_id": ""
+                },
+                {
+                    "id": 155503,
+                    "title": "展馆-0108",
+                    "image": {
+                        "url_list": [
+                            "https://p3-webcast.douyinpic.com/img/webcast/bbb4a45aeeada90a0a6ba103b754e21c.png~tplv-obj.image",
+                            "https://p11-webcast.douyinpic.com/img/webcast/bbb4a45aeeada90a0a6ba103b754e21c.png~tplv-obj.image"
+                        ],
+                        "uri": "webcast/bbb4a45aeeada90a0a6ba103b754e21c.png",
+                        "height": 0,
+                        "width": 0,
+                        "avg_color": "#CECEEB",
+                        "image_type": 0,
+                        "open_web_url": "",
+                        "is_animated": false,
+                        "flex_setting_list": [],
+                        "text_setting_list": []
+                    },
+                    "height": 72,
+                    "width": 248,
+                    "schema_url": "",
+                    "action_type": 1,
+                    "banner_type": 0,
+                    "priority": 0,
+                    "text": "",
+                    "frame_type": 2,
+                    "extra": "{\"id\":\"giftwall_mission_20230108\",\"pageUrl\":\"https://lf3-static.bytednsdoc.com/obj/eden-cn/ajhlcps_lm_zlp/ljhwZthlaukjlkulzlp/protocol-banner/c353641a958398643a55279661b240d3.html\",\"rootId\":\"giftwall_mission_20230108\",\"scriptSrc\":\"https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/protocol_banner/0.0.29/protocol-runtime.min.js?protocol=1\\u0026protocol_id=giftwall_mission_20230108\\u0026default_img=https%3A%2F%2Flf6-webcastcdn-tos.douyinstatic.com%2Fobj%2Fwebcast%2Fbbb4a45aeeada90a0a6ba103b754e21c.png\\u0026activity_name=%20\\u0026activity_name_bg_color=rgba(0%2C%200%2C%200%2C%200.2)\\u0026default_img_user=https%3A%2F%2Flf6-webcastcdn-tos.douyinstatic.com%2Fobj%2Fwebcast%2F2f78e9899ec5dc4c1aec046816ba983e.png\\u0026page_url=sslocal%3A%2F%2Fwebcast_webview%3Furl%3Dhttps%253A%252F%252Flf-webcast-gr-sourcecdn.bytegecko.com%252Fobj%252Fbyte-gurd-source-gr%252Fwebcast%252Fmono%252Fh5%252Frevenue_gift_exhibition_hall_h5_douyin%252Fpages%252Fgift_list%252Findex.html%253F_pia_%253D1%2526web_bg_color%253Dff060a19%2526sponsor_status%253Dnormal_sponsor%2526source%253Dgiftwall_mission_banner%26type%3Dpopup%26gravity%3Dbottom%26height_percent%3D75%26web_bg_color%3Dff060a19%26radius%3D23%26radius_bottom_right%3D0%26radius_bottom_left%3D0%26enable_preload%3Dall%26add_safe_area_height%3D0%26use_wk_falcon%3D2\\u0026container_type=task\"}",
+                    "status": 0,
+                    "uid": 0,
+                    "roomid": 0,
+                    "appointment_start_timestamp": 0,
+                    "appointment_end_timestamp": 0,
+                    "appointment_id": 0,
+                    "tracking_type": [],
+                    "open_id": ""
+                }
+            ],
+            "collapse": {
+                "enable": false,
+                "background_color": "",
+                "collapse_height": 0,
+                "vertical_line_color": ""
+            },
+            "container_height": 0,
+            "container_width": 0,
+            "lynx_container_url": "",
+            "container_type": 0,
+            "token_list": []
+        }
+    },
+    "extra": {
+        "now": 1761256844040
+    },
+    "status_code": 0
+}
 
-[可能 API] https://live.douyin.com/webcast/assets/effects/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&device_id=7564537236920239662&webcast_sdk_version=2450&is_living=false&download_assets_from=3&a_bogus=mX4VgHSjE2AVcdFSuCc0SH%2FlCw2lNPSjaFiKReqK9PFPcZUcJbNDFOSOJozr4D5758p0iFIHWxFAbdxc0oXz1Arkqmkvu2GWW0CIV6fogZr2YsvhINRdCmSLoJiP%2F58E%2F%2F1vx1yIUU%2Fc1D5UwqQT8Q57F%2Flw5QYpRw9ifNXGT1wphmT95f%3D%3D
-[Response JSON]: {"data":{"assets":[{"name":"王者巅峰 进场特效","resource_uri":"https://sf1-cdn-tos.huoshanstatic.com/obj/webcast/0e7f2c47bfb3e9ca641a80f5df54dace.zip","legacy_effect_id":0,"resource_url":{"url_list":["https://lf5-hl-ali-webcastcdn-tos.douyinstatic.com/obj/webcast/0e7f2c47bfb3e9ca641a80f5df54dace.zip","https://lf6-webcastcdn-tos.douyinstatic.com/obj/webcast/0e7f2c47bfb3e9ca641a80f5df54dace.zip","https://lf5-webcastcdn-tos.douyinstatic.com/obj/webcast/0e7f2c47bfb3e9ca641a80f5df54dace.zip"],"uri":"webcast/0e7f2c47bfb3e9ca641a80f5df54dace.zip","height":0,"width":0,"avg_color":"#7A6053","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"describe":"王者巅峰 进场特效","id":7290,"resource_type":4,"md5":"0e7f2c47bfb3e9ca641a80f5df54dace","size":0,"loki_extra":"","download_type":2,"model_requirements":[],"format_265_resource":{"resource_uri":"https://sf1-cdn-tos.huoshanstatic.com/obj/webcast/e3e4dc63c1070d2519156416999af603.zip","resource_url":{"url_list":["http...
 
-[可能 API] https://live.douyin.com/webcast/setting/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&a_bogus=E6sVkFXLQxQRcd%2FbYKnwS9%2FU9ZIArTujA-iOSHOK9NTtcheO7SPuFNGOnozNsE57cRBziqIHWxF%2FbDxcs9Xs1A9pompfSLvbb4CnVXXogZJ1bTJhINfQCmtouJicAcSE%2FQl4x17IUU%2Fa1DQUiNQz8QA7w%2Fly5YRpWJ9zfxvGE1q26YGHqf%3D%3D
-[Response JSON]: {"data":{"0":null,"accessibility_combination_imp_close":false,"aftersale_detail_toolbar_ab":1,"aftersale_list_refactor":0,"anchor_connect_v2_filter_number":4989074,"anchor_connect_v2_type":0,"anchor_point_switch":1,"anniex_enable_default_forest_preload":false,"append_enable_partial_submit":0,"audience_ping_interval":120,"audience_shelf_full_screen_enable":0,"buynow_ev_params_manage":0,"caijing_cashier_config":{"bullet_link":"https://lf-cj-sourcecdn-tos.bytegecko.com/obj/byte-gurd-source/caijing/fe/cashdesk_lynx/fe_lynx_cashdesk/dynamic_202405.js?prefix=caijing%2Ffe%2Fcashdesk_lynx","version":1,"webcast_link":"https://lf-webcast-sourcecdn-tos.bytegecko.com/obj/byte-gurd-source/10181/gecko/resource/fe_lynx_cashdesk_dynamic/dynamic_202408.js","webcast_link_rl3":"https://lf-webcast-sourcecdn-tos.bytegecko.com/obj/byte-gurd-source/10181/gecko/resource/fe_lynx_cashdesk/dynamic_rl3.js"},"carousel_disable_interaction_id":[101565],"carousel_time_v2":0,"comment_promotion_delay":0,"common_interac...
 
-[可能 API] https://live.douyin.com/webcast/dress/list/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&a_bogus=Dvsfhq6LYd8ncdMbmOnhS9MlQZ6lrsuj5-TdSCKuSNTuOheOJSNLFNSOboFr4x57cmp0iKV71xFAbdxc0nUk1ArpqmpkSPvbS09cVXmoMZ7IYBihnrfxCkGLuJNPARWEKA17x1yIUU%2Fa1D5UwNdk8dAHL%2FU75YYpWw9kfxvGT1q1gTiC7sg%3D
-[Response JSON]: {"data":{"dress_list":[{"dress_id":"6965479160588276744","dress_type":1,"dress_name":"","priority":0,"avatar_border_config":{"avatar_border":{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/1bacced6cb3f1d2850cbd7be21da9d01.png~tplv-resize:282:282.image","https://p11-webcast.douyinpic.com/img/webcast/1bacced6cb3f1d2850cbd7be21da9d01.png~tplv-resize:282:282.image"],"uri":"webcast/1bacced6cb3f1d2850cbd7be21da9d01.png","height":0,"width":0,"avg_color":"#FFF1EB","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"thumb_avatar_border":{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/1bacced6cb3f1d2850cbd7be21da9d01.png~tplv-resize:282:282.image","https://p11-webcast.douyinpic.com/img/webcast/1bacced6cb3f1d2850cbd7be21da9d01.png~tplv-resize:282:282.image"],"uri":"webcast/1bacced6cb3f1d2850cbd7be21da9d01.png","height":0,"width":0,"avg_color":"#EBCEE1","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[]...
 
-[可能 API] https://live.douyin.com/aweme/v1/web/user/profile/self/?device_platform=webapp&aid=6383&channel=channel_pc_web&publish_video_strategy_type=2&source=channel_pc_web&personal_center_strategy=1&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=d7snkF7yOoRVPdFGYKniSC%2FlJHxANs8j3-TxSHxutOzbcZtcvbNgFrSYGozN4EQ7C8BziKI7XxFMbdxcT9Xk1IHkLmkDSwXjSsCnVWfL8Z7IbTvhVqfdCsGLwJiOAR8EQ51JxA76AU%2FaZxcUhNQw8B-Ho%2Fl75mbpS79kfxfaP1wVpBi3
-[Response JSON]: {"extra":null,"log_pb":{"impr_id":"20251024054808740E43B05F82495265E0"},"status_code":8,"status_msg":"用户未登录","user":null,"user_collect_count":{"log_pb":{"impr_id":"20251024054808740E43B05F82495265E0"},"status_code":8,"status_msg":"用户未登录"},"user_watchlater_count":{"status_code":0,"status_msg":"","user_watchlater_count":0}}...
 
-[可能 API] https://live.douyin.com/webcast/gift/list/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&device_id=7564537236920239662&webcast_sdk_version=2450&room_id=7564520129317358371&to_room_id=7564520129317358371&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&sec_to_user_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&gift_scene=1&to_episode_id=0&fetch_giftlist_from=3&a_bogus=QJsRg77Jdo5bFd%2FGmCnsSHMUHhLlNBWjy-iObHCKyOPNcqtPJYNgFPSYJozrsEQ75RBhio171xFMYddczoUi1IHkwmkfuLJ6RU9nVWXogZr1YskhVHfQCDSouJNaA5uEO51vx1yI1U8cZxQUwqQw8B5Hq%2Flw5QYpRwCsfO6aO1qfIYTHgE%3D%3D
-[Response JSON]: {"data":{"gifts_info":{"new_gift_id":0,"fansclub_gift_ids":[6309,860,11884,685,6937,6938,6939,679,875,3835,3834,3817,3246,3568,6292,458],"speedy_gift_id":463,"gift_words":"","gift_group_infos":[{"group_count":1,"group_text":"一心一意"},{"group_count":10,"group_text":"完美"},{"group_count":66,"group_text":"6的起飞"},{"group_count":188,"group_text":"要抱抱"},{"group_count":520,"group_text":"为爱应援"},{"group_count":999,"group_text":"钟爱于你"},{"group_count":1314,"group_text":"Dou是你"}],"free_cell_items":[],"honor_gift_ids":[5923,5922,5921,5920],"game_gift_items":[],"noble_gift_ids":[],"hide_recharge_entry":false,"gift_entrance_icon":{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/47f428e737df0120d6324d368e00bcbe.webp~tplv-obj.image","https://p11-webcast.douyinpic.com/img/webcast/47f428e737df0120d6324d368e00bcbe.webp~tplv-obj.image"],"uri":"webcast/47f428e737df0120d6324d368e00bcbe.webp","height":0,"width":0,"avg_color":"#A3897C","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_l...
 
-[可能 API] https://live.douyin.com/webcast/room/web/enter/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&web_rid=897550903629&room_id_str=7564520129317358371&enter_source=&is_need_double_stream=false&insert_task_id=&live_reason=&a_bogus=Oj0fkt7jmdQfKdFtucnhSe%2FlJHfMNTSjmFTdWn%2FKCxPLcwlPvbPDFaGYaoFN4E57CRpkiqI71xF%2FYxdcT9Xi11HkomkvSwhyWs99VX6LZZJIbsJhVNRxCstowJic%2FcWEO%2F1UxAyIAU8O1d5UwNds8p57z%2FUyQYbpRw9zfOvaN1wXgcsHQj%3D%3D
-[Response JSON]: {"data":{"data":[{"id_str":"7564520129317358371","status":2,"status_str":"2","title":"敢不敢进来看看才艺主播","user_count_str":"52","cover":{"url_list":["https://p3-webcast-sign.douyinpic.com/image-cut-tos-priv/897a670bc1cc11735e25ce0e12d3c2aa~tplv-qz53dukwul-common-resize:0:0.image?biz_tag=app_6383_webcast\u0026from=webcast.room.pack\u0026l=20251024054808BEA4CBA156602D46DD15\u0026lk3s=39e7556e\u0026s=enter_room\u0026sc=webcast_cover\u0026x-expires=1763848088\u0026x-signature=uhvJRWl3XvxyKOWPcToOxaLlRGc%3D","https://p11-webcast-sign.douyinpic.com/image-cut-tos-priv/897a670bc1cc11735e25ce0e12d3c2aa~tplv-qz53dukwul-common-resize:0:0.image?biz_tag=app_6383_webcast\u0026from=webcast.room.pack\u0026l=20251024054808BEA4CBA156602D46DD15\u0026lk3s=39e7556e\u0026s=enter_room\u0026sc=webcast_cover\u0026x-expires=1763848088\u0026x-signature=9ot0RkdC%2BOVXhEIb65fPC%2BB%2Bj3A%3D"]},"stream_url":{"flv_pull_url":{"FULL_HD1":"http://pull-flv-l11.douyincdn.com/stage/stream-694656385925775505_or4.flv?arch_hrchy=w1...
-
-[可能 API] https://lf-normal-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/react_lynx_web3_douyin/index.html
-[Response JSON]: <!doctype html>
-<html style="font-size: calc(100vw * 100 / 375); width: 100%; height: 100%; margin: 0px; padding: 0px; overflow: hidden;">
-<head>
-    <title>抖音直播</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="screen-orientation" content="portrait">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="x5-orientation" content="portrait">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="screen-orientation" content="portrait"><meta name="format-detection" content="telephone=no"><meta name="x5-orientation" content="portrait"><script type="module" src="https://lf-normal-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/react_lynx_web3_douyin/static/js...
-
-[可能 API] https://live.douyin.com/webcast/gift/exhibition/rare/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&target_uid=93778703014&room_id=7564520129317358371&a_bogus=QjsVDFtJYNmVcVMSYcn0S9%2FlfXVANP8jSMTOWYPKSOKjOqFa7uNgFcSYboznsDQ7cRBwiFVH1xzAYDVcz9Uw1AnpwmpDSMzRbU9IVXmo2Z7ZYTJhVrfKCsSLoJNO%2F5SEK514xl7IlU8P1EcUkNQz8Q-7F%2Fl75Qbpbi9TfPXGN1wgXG7G7hS%3D
-[Response JSON]: {"data":{"message":"User doesn't login","prompts":"请登录后进入直播间"},"extra":{"now":1761256088334},"status_code":20003}...
-
-[可能 API] https://live.douyin.com/webcast/privilege/subscribe/info/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&room_id=7564520129317358371&anchor_id=93778703014&purchase_type=1&a_bogus=xX0Vhq7ixZWbOdFGuOc0SeZUJ19MrPujIeioWo3KCNKDcwUc78PgFNtYaoFnsxQ7ARpiiqI7XxFlbdVcsxUh11rkLmkfuZUjS49AVWvLZZ71bBvhVHfKCDtozJiP%2FRSEO%2F1UxAyIWU8PZdQUkqdz8B-7u%2FULQmmpRiCwfxvaP1wk3ote
-[Response JSON]: {"data":{"message":"User doesn't login","prompts":"请登录后进入直播间"},"extra":{"now":1761256088411},"status_code":20003}...
-
-[可能 API] https://live.douyin.com/webcast/wish/list/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&device_id=7564537236920239662&webcast_sdk_version=2450&anchor_id=93778703014&anchor_id_str=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&room_id=7564520129317358371&fetch_from=2&a_bogus=D745DtULDdAccdKGmOniSeMURXnlNPWjVMi2Wn1u7NO5OqtP7bPEFabYGoFrsE57CmpziF17lxzMYExcT9Xs1AHkompDuMUfb0C5V60LMZHZYPvhVqRxCsbLLJiaAcWEQQl7x176UU%2FP1xcUkNQs8QlHw%2FUL5QmpW79wfNfaY1w6XBzt7ky%3D
-[Response JSON]: {"data":{"wish_list":[],"wish_switch":1,"has_assisted":false,"has_subscribe_wish_permission":false,"has_theme_wish_permission":false,"cancel_wish_flag":false,"activity_wish_list":[],"open_wish":[-1],"anchor_name":"","common_wish_info":{"wish_list":[{"wish_name":"礼物心愿","wish_type":1,"wish_status":3,"current_progress":6,"target_progress":20,"wish_info_extra":{"gift_id":4353,"gift_icon":{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/a44104d2d61cc1868495ea9a58ced24f.png~tplv-obj.image","https://p11-webcast.douyinpic.com/img/webcast/a44104d2d61cc1868495ea9a58ced24f.png~tplv-obj.image"],"uri":"webcast/a44104d2d61cc1868495ea9a58ced24f.png","height":0,"width":0,"avg_color":"#607A53","image_type":0,"open_web_url":"","content":{"name":"跑车","font_color":"","level":0,"alternative_text":""},"is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"gift_type":13,"diamond_count":1200,"gift_alias":"跑车","cards":[],"card_name":"","is_locked":false,"toast":"","status_icon":{"url_lis...
-
-[可能 API] https://live.douyin.com/webcast/user/me/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=0&a_bogus=Df45gtSyDq5bedMS8ccwSCZlG7L%2FrBWjmPTQbTOKCPOiOhlaXmNYFxtYaozxsEc7cmBTiF17UxFlYxxc09Xw1AHkzmpkSZ7fS0CIV6fogZr2YskhIHfxCmGoKJiP%2FbSE%2FA1Jxl7IWU8aZdOUkHQ08QA7K%2Fl75QYpW79sfPvaY1wZIcTHdj%3D%3D
-
-[可能 API] https://live.douyin.com/webcast/room/short_touch/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&room_id=7564520129317358371&a_bogus=m6sRg7XJmx%2FRKdFG8CczSe2Uc1LlNBSjhBToboKuyxO9OZlcXWPLFPtYaozr4DQ7A8phio1HUxFlYEdcToUz11Hkzmpfuw0yS49VVUXo%2FZ71bskhIHRoCsSLFJia%2F5SEQ%2F1UxlyIAU%2FP1E5Uwqdk8plHL%2Fl75YmpW7ChfPvGY1w8pqse
-[Response JSON]: {"data":{"short_touch_area":[]},"extra":{"now":1761256088457},"status_code":0}...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/emoji/list?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&a_bogus=D6sVktSLxdRcCVMGucnTSCZlJ1IMrTWjABioSePKeNTzOqeO7WPgFNSYJoznsxQ7cmB0iFI7AxFlbDnc09Xi1AHpqmkfSZ0bR495VUvogZJ2YBkh9rRKCsGLuJiO%2FbSE%2FAlUxI7IWU%2FcZxQUkHQs8BlHq%2FlLQYmpWJCsfNXaO1qh6cs7Yf%3D%3D
-[Response JSON]: {"status_code":0,"version":1756711440374,"emoji_list":[{"origin_uri":"weixiao.png","display_name":"[微笑]","hide":0,"emoji_url":{"uri":"tos-cn-i-tsj2vxp0zn/907e61eb04e54074a101b43035d50145","url_list":["https://p3-pc-sign.douyinpic.com/obj/tos-cn-i-tsj2vxp0zn/907e61eb04e54074a101b43035d50145?lk3s=343af0a2\u0026x-expires=2076609600\u0026x-signature=0VDa%2F3S%2F7Fo0eW%2FMhNaayfcDAcQ%3D\u0026from=876277922","https://p9-pc-sign.douyinpic.com/obj/tos-cn-i-tsj2vxp0zn/907e61eb04e54074a101b43035d50145?lk3s=343af0a2\u0026x-expires=2076609600\u0026x-signature=APCzWuGVEGXtxWj%2Ba%2BkFV7oYsgI%3D\u0026from=876277922"]}},{"origin_uri":"aimu.png","display_name":"[色]","hide":0,"emoji_url":{"uri":"tos-cn-i-tsj2vxp0zn/fba0f99d4b8049cd905bfd076d4efbf2","url_list":["https://p3-pc-sign.douyinpic.com/obj/tos-cn-i-tsj2vxp0zn/fba0f99d4b8049cd905bfd076d4efbf2?lk3s=343af0a2\u0026x-expires=2076609600\u0026x-signature=7jczv0wzX%2F2oEhgq1NyzUggCjKo%3D\u0026from=876277922","https://p9-pc-sign.douyinpic.com/obj/tos-cn...
-
-[可能 API] https://live.douyin.com/webcast/room/interaction/info/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=7564520129317358371&scene=10&a_bogus=YysVkzWwQ2ARKd%2FG8cnkSeMU%2Fhd%2FNBWjEBTQbi9KHNuYOqzO7uNmFabOboFnsdc7AmpTiKIH6xFlYxxc09X01AnkqmpvSYvWWs95VUXLhZH1bsJhnHfQCkbLLJNaA5WE%2F5ltx1J61U%2FPZDQUkNdT8d-Hw%2Fl75QbpRJCTfPfGY1q23LXV
-[Response JSON]: {"data":{"like_icon_info":{"icons":[{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/like_icon_1.png~tplv-resize:96:96.image","https://p11-webcast.douyinpic.com/img/webcast/like_icon_1.png~tplv-resize:96:96.image"],"uri":"webcast/like_icon_1.png","height":0,"width":0,"avg_color":"#7A6053","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/like_icon_2.png~tplv-resize:96:96.image","https://p11-webcast.douyinpic.com/img/webcast/like_icon_2.png~tplv-resize:96:96.image"],"uri":"webcast/like_icon_2.png","height":0,"width":0,"avg_color":"#EBE1CE","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/like_icon_3.png~tplv-resize:96:96.image","https://p11-webcast.douyinpic.com/img/webcast/like_icon_3.png~tplv-resize:96:96.image"],"uri":"webcast/like_icon_3.png","height":0,"wid...
-
-[可能 API] https://mon.zijieapi.com/monitor_web/settings/browser-settings?bid=uc_secure_sdk&store=1
-[Response JSON]: {"data":{"sample":{"sample_rate":1,"include_users":[],"sample_granularity":"session","rules":[{"name":"js_error","enable":false,"sample_rate":0,"conditional_sample_rules":[]},{"name":"http","enable":false,"sample_rate":0,"conditional_sample_rules":[]},{"name":"performance","enable":false,"sample_rate":0,"conditional_sample_rules":[]},{"name":"resource_error","enable":false,"sample_rate":0,"conditional_sample_rules":[]},{"name":"resource","enable":false,"sample_rate":0,"conditional_sample_rules":[]},{"name":"custom","enable":true,"sample_rate":1,"conditional_sample_rules":[{"sample_rate":0.1,"filter":{"type":"and","children":[{"type":"rule","field":"payload.name","op":"eq","groupKey":"","values":["secure_sdk_get_data"]}]}},{"sample_rate":0.0001,"filter":{"type":"and","children":[{"type":"rule","field":"payload.name","op":"eq","groupKey":"","values":["execute_localstorage_getkeys"]}]}},{"sample_rate":0.1,"filter":{"type":"and","children":[{"type":"rule","field":"payload.name","op":"eq","...
-
-[可能 API] https://live.douyin.com/webcast/gift/exhibition/home/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&anchor_id=93778703014&room_id=7564520129317358371&exhibition_source=1&a_bogus=Of4fDeXwOpWbaV%2FbYOnkSeBl5hElrTWjZPTxR7Mu9PTrch0OXbPuFaSYboFrsEO7CWpwioIHWxFlbxdc0xXi11rkqmkkSFk6bUCAVX0LZZH1bBJhnHROCsGozJNcAbSEO517xlJ61U%2FaZdcUiqQz8dlHL%2FlL5mYpRJCzfNfax1q6h-4G708%3D
-[Response JSON]: {"data":{"anchor_name":"是芹菜菜菜🥬","lighted_items":[{"gift":{"gift_id":12786,"name":"星光玫瑰","image":{"url_list":["https://p11-webcast.douyinpic.com/img/webcast/d17c4363b22af9ff378e462c45789d90.png~tplv-obj.png","https://p3-webcast.douyinpic.com/img/webcast/d17c4363b22af9ff378e462c45789d90.png~tplv-obj.png"],"uri":"webcast/d17c4363b22af9ff378e462c45789d90.png","height":0,"width":0,"avg_color":"#BCBCE0","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"diamond_count":7500,"type":2,"status":0,"scheme_url":"","property":1,"gift_type":0},"lighted_threshold":1,"received_count":1,"is_lighted":true,"naming_user":{"user_id":71185240496,"user_id_str":"71185240496","nickname":"lian","avatar":{"url_list":["https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_4aa60033d6c245d79e4a16e777147c83.jpeg?from=3067671334","https://p3-webcast.douyinpic.com/img/https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_4aa60033d6c245d79e4a16e7...
-
-[可能 API] https://live.douyin.com/webcast/ranklist/hour_entrance/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&cpu_core_num=16&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&channel=channel_pc_web&webid=7564537236920239662&user_agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&fp=&did=0&referer=&target=&anchor_id=93778703014&target_open_id=93778703014&room_id=7564520129317358371&a_bogus=dXsfkwXixN8jFV%2Fb8cczSC2lmwIlrPWjxai2b9VutxF7chMOvRNEFNtOaoFrsDO7cmBwioI7lxFAbxVcT9Uz1IrpqmkkusGRb4CIVXso%2FZ72YBihIqRoCDSoFJiaARWEKA1Ux176AU8cZE5Uhrdh8dAHq%2FUyQQmpSi9kfNvai1qZ6-vS7Bj%3D
-[Response JSON]: {"data":{"support_ranklist_types":[6,24,1,10,3,47,0,25,12,13],"info":{"global_infos":[{"details":[{"pages":[{"content":"小时榜","background_color":"","show_times":0,"content_type":0}],"ranklist_type":0,"title":"小时榜","ranklist_extra":"","entrance_extra":"","schema":"","icon_url":""}]},{"details":[{"pages":[{"content":"人气榜","background_color":"","show_times":0,"content_type":0}],"ranklist_type":3,"title":"人气榜","ranklist_extra":"","entrance_extra":"","schema":"","icon_url":""}]}],"default_global_infos":[{"details":[{"pages":[{"content":"小时榜","background_color":"","show_times":0,"content_type":0}],"ranklist_type":0,"title":"小时榜","ranklist_extra":"","entrance_extra":"","schema":"","icon_url":""}]},{"details":[{"pages":[{"content":"人气榜","background_color":"","show_times":0,"content_type":0}],"ranklist_type":3,"title":"人气榜","ranklist_extra":"","entrance_extra":"","schema":"","icon_url":""}]}],"vertical_infos":[],"default_vertical_infos":[]},"period_remain_seconds":712,"extra":"{\"province_name\"...
-
-[可能 API] https://live.douyin.com/webcast/ranklist/audience/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&webcast_sdk_version=2450&room_id=7564520129317358371&anchor_id=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&ignoreToast=true&rank_type=30&a_bogus=QjUVgqtyONRRcVKb8cnTS9pU2H6%2FNT8ja-i%2FRJMKtOP1ch0cvmNDFxbOaoFN4x57CRpkiKV7XxzMYddc0oXh1IrkFmpkSY7ybs9nVWmoZZ7IbTihVHRKCstozJiPA5uEOAlUxA7I6U8OZDcUhHdh8p5Hw%2FULQQmpbw9ifPfGP1q1gazn72S%3D
-[Response JSON]: {"data":{"ranks":[{"user":{"id":2782213229000679,"short_id":0,"nickname":"Guan CT","gender":1,"signature":"","level":0,"birthday":0,"telephone":"","avatar_thumb":{"url_list":["https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ.jpeg?from=3067671334","https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ.jpeg?from=3067671334","https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ.jpeg?from=3067671334"],"uri":"100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ","height":0,"width":0,"avg_color":"","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"verified":false,"experience":0,"city":"","status":0,"create_time":0,"modify_time":0,"secret":1,"share_qrcode_uri":"","income_share_percent":0,"badge_image_list":[],"follow_info":{"following_count":0,"followe...
-
-[可能 API] https://live.douyin.com/webcast/ranklist/audience/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&webcast_sdk_version=2450&room_id=7564520129317358371&anchor_id=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&ignoreToast=false&rank_type=30&a_bogus=DJ4VDzX7E28fFVFtYcnkSeplkwLANsSj3BTOWzeu7OKicqtavWP8FNbOnoFr4xQ7CRphiF1HlxzAYxxcToXs1lnkwmkfSP46b0CVV6mo8Z7ZYBkh9rf2CDtLKJNPA58EK%2F1JxlJ66U8OZDOUhHQk8Q-Hu%2FU75YRpSJ9hfxXGY1w1g-Jb7BW%3D
-[Response JSON]: {"data":{"ranks":[{"user":{"id":2782213229000679,"short_id":0,"nickname":"Guan CT","gender":1,"signature":"","level":0,"birthday":0,"telephone":"","avatar_thumb":{"url_list":["https://p11.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ.jpeg?from=3067671334","https://p26.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ.jpeg?from=3067671334","https://p3.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ.jpeg?from=3067671334"],"uri":"100x100/aweme-avatar/tos-cn-i-0813c001_oQiZmIOOBDSjAoAMiiov0IEcylk2AlABKAPSQ","height":0,"width":0,"avg_color":"","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"verified":false,"experience":0,"city":"","status":0,"create_time":0,"modify_time":0,"secret":1,"share_qrcode_uri":"","income_share_percent":0,"badge_image_list":[],"follow_info":{"following_count":0,"followe...
-
-[可能 API] https://live.douyin.com/webcast/lottery/melon/lottery_info/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=7564520129317358371&query_from=1&a_bogus=xJUnDzUJDx8nFVMSYCcTSeZUx7VMNPWjnlT%2FSNau9NKFOZUa7RNEFrSOnoFn4Dc7cRBwiKVH6xF%2FYEVcsxXi1IHpKmkvSNh6SsCIVU0ohZ7ZYPvh9Hf2CkSowJNP%2FcuE%2F%2F17xAJ6WU%2FO1D5UhHQw8pAHo%2FU7QQYpWwCifPfaT1wX6sXe7dj%3D
-[Response JSON]: {"data":{},"extra":{"now":1761256088837},"status_code":0}...
-
-[可能 API] https://live.douyin.com/webcast/room/in_room_banner/?aid=6383&app_name=douyin_web&live_id=1&device_platform=douyin_web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=7564520129317358371&live_ad_type=0&channel=&a_bogus=mX4Vk7XLYdQRadFbmcn0SCdlOwElNPWjwai%2FbSQKCPu4cheOvRPmFnSOaozNsE57A8BTio1HXxFlbDVcsoX01lnpFmpDuk46S49nVW8L%2FZ71YskhnrfKCsbLLJNaAcWEK%2F1Uxl7I1U%2Fa1dQUwqdk8BlHo%2FlL5mYpbJCkfOfGE1wggB4e7%2F6%3D
-[Response JSON]: {"data":{"top_right":{"container_url":"https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/banner_container_h5_douyin/template/pages/task.html?enable_carousel=true","banner_list":[{"id":123736,"title":"心愿单-主端","image":{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/214325b6b41560e82442ce7fb2054046.png~tplv-obj.image","https://p11-webcast.douyinpic.com/img/webcast/214325b6b41560e82442ce7fb2054046.png~tplv-obj.image"],"uri":"webcast/214325b6b41560e82442ce7fb2054046.png","height":0,"width":0,"avg_color":"#A3897C","image_type":0,"open_web_url":"","is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"height":72,"width":248,"schema_url":"","action_type":1,"banner_type":0,"priority":0,"text":"","frame_type":2,"extra":"{\"id\":\"wishList\",\"pageUrl\":\"https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/wish_list_banner_douyin/template/pages/index.html\",\"rootId\":\"wishList\",\"scriptSrc\":\"https:/...
-
-[可能 API] https://lf-normal-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/h5/react_lynx_web3_douyin/static/wasm/8e708eec9c98f88c.module.wasm
-[Response JSON]: AGFzbQEAAAABvAEbYAJ/fwBgAn9/AX9gA39/fwF/YAR/f39/AGADf39/AGABfwBgBX9/f39/AGAAAGAEf39/fwF/YAN/f38BfmACf38Bb2ABfwF/YAABf2AGf39/f39/AGAGf39/f39/AX9gBX9/f39/AX9gAAFvYAJvbwF/YAl/f39/f39/f38AYAR+fn9/AX5gBX9/fH9/AGAEf3x/fwBgBX9/fn9/AGAEf35/fwBgBX9/fX9/AGAEf31/fwBgBH9/f38BbwLsAQUQLi9zdGFuZGFyZF9iZy5qcyNfX3diZ19mcm9tQ2hhckNvZGVfNTQ5M2Y5YjI1ZTFjZTBhMQAKEC4vc3RhbmRhcmRfYmcuanMaX193YmdfbmV3Xzc4ZmViMTA4YjY0NzI3MTMAEBAuL3N0YW5kYXJkX2JnLmpzG19fd2JnX3B1c2hfNzM3Y2ZjOGMxNDMyYzJjNgAREC4vc3RhbmRhcmRfYmcuanMQX193YmluZGdlbl90aHJvdwAAEC4vc3RhbmRhcmRfYmcuanMfX193YmluZGdlbl9pbml0X2V4dGVybnJlZl90YWJsZQAHA0xLCxIBAwMIAQMCAwUEBgYTAAEDDAEAAAINBwQCDQ4DBQUABAQDAAUEAgAABgQLCQgJAAcAAA4GFA8WGAMCBQEaAQEMCgAEBAUABwAABAkCcAEWFm8AgAEFAwEAEQYJAX8BQYCAwAALB5QBBwZtZW1vcnkCACJ0cmFuc2Zvcm1fcmF3X3UxNl9pbmxpbmVfc3R5bGVfcHRyAEcpdHJhbnNmb3JtX3Jhd191MTZfaW5saW5lX3N0eWxlX3B0cl9wYXJzZWQAQwZtYWxsb2MAMQRmcmVlADUTX193YmluZGdlbl9leHBvcnRfMAEBEF9fd2JpbmRnZW5fc3RhcnQABAkbAQBBAQsVCzQyRQc8OSA6PEA/Ojo+Oz1PTkRBCvKRAkv1IgIIfwF+AkACQAJAAkACQAJAAkAg...
-
-[可能 API] https://lf-webcast-gr-sourcecdn.bytegecko.com/obj/byte-gurd-source-gr/webcast/mono/lynx/revenue_rank_list_douyin/web/pages/service_center_v2/template.js?room_id=7564520129317358371&user_id=&sec_user_id=&anchor_id=93778703014&anchor_id_str=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&enter_from_merge=link_share&request_id=undefined&enter_method=direct_open&user_unique_id=7564537236920239662
-[Response JSON]: {"styleInfo":{},"manifest":{"/app-service.js":"\"use strict\";let t,e,r,n,i,s,a,l,o,u,h;var _,c,f,v,d,p,m,w,g,b,y,x,k,S,q,I,E,j,C,z,A,O,T,R,L,N,D,P,M,B,U,F,J,V,H,$,G,W,Q,K,Y,X,Z,tt,te,tr,tn,ti,ts,ta,tl,to,tu,th,t_,tc,tf,tv,td,tp,tm,tw,tg,tb,ty,tx,tk,tS,tq,tI,tE,tj,tC,tz,tA,tO,tT,tR,tL,tN,tD,tP,tM,tB,tU,tF,tJ,tV,tH,t$,tG,tW,tQ,tK,tY,tX,tZ,t1,t0,t2,t3,t5,t6,t4,t7,t8,t9,et,ee,er,en,ei,es,ea,el,eo,eu,eh,e_,ec,ef,ev,ed,ep,em,ew,eg,eb,ey,ex,ek,eS,eq,eI,eE,ej,eC,ez,eA,eO,eT,eR,eL,eN,eD,eP,eM,eB,eU,eF,eJ,eV,eH,e$,eG,eW,eQ,eK,eY,eX,eZ,e1,e0,e2,e3,e5,e6,e4,e7,e8,e9,rt,re,rr,rn,ri,rs,ra,rl,ro,ru,rh,r_,rc,rf,rv,rd,rp,rm,rw,rg,rb,ry,rx,rk,rS,rq,rI,rE,rj,rC,rz,rA,rO,rT,rR,rL,rN,rD,rP,rM,rB,rU,rF,rJ,rV,rH,r$,rG,rW,rQ,rK,rY,rX,rZ,r1,r0,r2,r3,r5,r6,r4,r7,r8,r9,nt,ne,nr,nn,ni,ns,na,nl,no,nu,nh,n_,nc,nf,nv,nd,np,nm,nw,ng,nb,ny,nx,nk,nS,nq,nI,nE,nj,nC,nz,nA,nO,nT,nR,nL,nN,nD,nP,nM,nB,nU,nF,nJ,nV,nH,n$,nG,nW,nQ,nK,nY,nX,nZ,n1,n0,n2,n3,n5,n6,n4,n7,n8,n9,it,ie,ir,ii,is,ia,il,io,iu,ih,i_,ic,iv,id,ip,im,iw,ig,...
-
-[可能 API] https://mon.zijieapi.com/monitor_web/settings/browser-settings?bid=anniex_web_webcast&store=1
-[Response JSON]: {"data":{"sample":{"sample_rate":1,"include_users":[],"sample_granularity":"session","rules":[{"name":"js_error","enable":true,"sample_rate":1,"conditional_sample_rules":[{"sample_rate":0,"filter":{"type":"and","children":[{"type":"rule","field":"payload.error.message","op":"eq","groupKey":"","values":["Failed to fetch"]},{"type":"rule","field":"payload.error.name","op":"eq","groupKey":"","values":["TypeError"]}]}}]},{"name":"http","enable":true,"sample_rate":1,"conditional_sample_rules":[]},{"name":"performance","enable":true,"sample_rate":1,"conditional_sample_rules":[]},{"name":"resource_error","enable":true,"sample_rate":1,"conditional_sample_rules":[]},{"name":"resource","enable":true,"sample_rate":0.1,"conditional_sample_rules":[]},{"name":"custom","enable":true,"sample_rate":1,"conditional_sample_rules":[{"sample_rate":1,"filter":{"type":"and","children":[{"type":"rule","field":"payload.name","op":"eq","groupKey":"","values":["template_load_error"]}]}}]},{"name":"performance_tim...
-
-[可能 API] https://security.zijieapi.com/api/metrics/emit
-[Response JSON]: {"message":"test"}...
-
-[可能 API] https://live.douyin.com/webcast/setting/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&a_bogus=DX4fDqSJENQbedKtuKnsSe-l4HflNsujCBT2S9PuyNPuOqFOfbNEFcbOGoznsxQ75mpkioI71xzMYxdcz9Xs1AnkFmpDu0XyW09CVW0oZZ7ZbTvhnHf%2FCmtLLJNaA5WEK%2FlXx17IlU%2FO1xOUkNQs8B-7q%2FUwQYYpW7CsfOXaP1wh6-tJ72D%3D
-[Response JSON]: {"data":{"0":null,"accessibility_combination_imp_close":false,"aftersale_detail_toolbar_ab":1,"aftersale_list_refactor":0,"anchor_connect_v2_filter_number":4989074,"anchor_connect_v2_type":0,"anchor_point_switch":1,"anniex_enable_default_forest_preload":false,"append_enable_partial_submit":0,"audience_ping_interval":120,"audience_shelf_full_screen_enable":0,"buynow_ev_params_manage":0,"caijing_cashier_config":{"bullet_link":"https://lf-cj-sourcecdn-tos.bytegecko.com/obj/byte-gurd-source/caijing/fe/cashdesk_lynx/fe_lynx_cashdesk/dynamic_202405.js?prefix=caijing%2Ffe%2Fcashdesk_lynx","version":1,"webcast_link":"https://lf-webcast-sourcecdn-tos.bytegecko.com/obj/byte-gurd-source/10181/gecko/resource/fe_lynx_cashdesk_dynamic/dynamic_202408.js","webcast_link_rl3":"https://lf-webcast-sourcecdn-tos.bytegecko.com/obj/byte-gurd-source/10181/gecko/resource/fe_lynx_cashdesk/dynamic_rl3.js"},"carousel_disable_interaction_id":[101565],"carousel_time_v2":0,"comment_promotion_delay":0,"common_interac...
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1618&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&a_bogus=dy0fg77JmZA5ad%2FGucnzSH3lqhLANT8j0FiQWr1KHxu9cqlPfmNLFPtYGoFn4xQ7AWBiiK3H6xFAbddcTxXh11nkLmkvuxk6WUCcVX0LhZ71YBvhnNRKCDtooJiP%2Fb8EO%2F1txAy6WU8a1dOUkHdi8plHz%2FUw5mmpSJ9hfNfaY1wg6TiG7DS%3D
-
-[可能 API] https://live.douyin.com/webcast/growth/activity/common_banner/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=7564520129317358371&user_id=&sec_user_id=&anchor_id=93778703014&anchor_id_str=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&enter_from_merge=link_share&enter_method=direct_open&user_unique_id=7564537236920239662&action_type=click&meta_ids=%5B%5D&activity_id=giftwall_mission_20230108&a_bogus=d7sVkq7wdNQcKd%2FtYCcTS9VUWH2ANTujPFiObY9K9OFyOhFOyWPEFPtYjozn4xQ7c8BziKI7UxzAYdxcToXk1lrpLmkku%2F7bW0CAVUmLgZHIYsvhIqf%2FCDGLoJNaAb8EO5l4xlJIlU%2FaZDcUird08Q-7o%2FUy5YmpR79hfNvaT1qhhG0r7hD%3D
-[Response JSON]: {"data":{"_extra":{"now":1761256089612}},"extra":{"now":1761256089612},"status_code":0}...
-
-[可能 API] https://live.douyin.com/webcast/luckybox/box/list/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=7564520129317358371&user_id=&sec_user_id=&anchor_id=93778703014&anchor_id_str=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&enter_from_merge=link_share&enter_method=direct_open&user_unique_id=7564537236920239662&a_bogus=EX4Vgq7id2mnKd%2FtmCciSCVlX76MNsWjSFToWbrK7NKecw0O6RP8FYGOrFzn4DQ7C8pziKIH6xFDYdDczxA7U19pqmkfSu76R0CAVUmo0Z72YsihVNRxCkbLLJiOAcuEO5lUx1JIWU8O1dQUhNdi8dAHz%2FlwQmYpR7CwfOXGT1q62TXe78W%3D
-[Response JSON]: {"data":[],"extra":{"now":1761256089619},"status_code":0}...
-
-[可能 API] https://live.douyin.com/webcast/wish/list/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-TW&enter_from=link_share&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&room_id=7564520129317358371&user_id=&sec_user_id=&anchor_id=93778703014&anchor_id_str=93778703014&sec_anchor_id=MS4wLjABAAAACkM2-bj6RmiHb_2TDcEXrBFH_Kzic_wiOyxrdevVlcg&enter_from_merge=link_share&enter_method=direct_open&user_unique_id=7564537236920239662&action_type=click&is_banner=true&fetch_from=1&is_admin=false&a_bogus=xj45gwU7YoWfOVMG8CnzSH3lvqLMNsWjcaTQRupKtxOKOhtOyWNDFObYaozrsDQ7CWB0iq17Uxz%2FbEdcznXw1AHpLmkDSMGySsC5VWmL0Z71bTJhIrRKCmbLwJic%2FbWE%2FAl4xAJ6IU%2Fa1EOUiHQi8p-HK%2Flw5ORpWJCkfxXaT1q664it7Qy%3D
-[Response JSON]: {"data":{"wish_list":[],"wish_switch":1,"has_assisted":false,"has_subscribe_wish_permission":false,"has_theme_wish_permission":false,"cancel_wish_flag":false,"activity_wish_list":[],"open_wish":[-1],"wish_banner_data":{"now_time":1761256089639,"user_id":0,"gift_id":0,"count":0,"activity_id":0,"wish_type":0,"banner_wish_list":[{"wish_info_list":[{"wish_name":"礼物心愿","wish_type":1,"wish_status":3,"current_progress":6,"target_progress":20,"wish_info_extra":{"gift_id":4353,"gift_icon":{"url_list":["https://p3-webcast.douyinpic.com/img/webcast/a44104d2d61cc1868495ea9a58ced24f.png~tplv-obj.image","https://p11-webcast.douyinpic.com/img/webcast/a44104d2d61cc1868495ea9a58ced24f.png~tplv-obj.image"],"uri":"webcast/a44104d2d61cc1868495ea9a58ced24f.png","height":0,"width":0,"avg_color":"#CCB1A3","image_type":0,"open_web_url":"","content":{"name":"跑车","font_color":"","level":0,"alternative_text":""},"is_animated":false,"flex_setting_list":[],"text_setting_list":[]},"gift_type":13,"diamond_count":120...
-
-[可能 API] https://lf3-config.bytetcc.com/obj/tcc-config-web/tcc-v2-data-douyin.pc.web-default
-[Response JSON]: {"data":{"LiveSmallWindow":"{\n    \"restrictTime\": 10,\n    \"durationTime\": 10,\n    \"ratio\": 2,\n    \"showTime1\": 5, \n    \"showTime2\": 10\n}","LoginGuideConfig":"{\n    \"hideLoginGuideStartTime\": 1643608800000,\n    \"hideLoginGuideEndTime\": 1643648400000,\n    \"hideLoginGuide\": true\n}","NCEE":"{\n    \"showDanmu\": 1,\n    \"offLine\": 1,\n    \"countdownDate\": \"2023-06-07 00:00\",\n    \"t\": 2\n}","ScanCodeEntrance":"{ \"location\": 1 }\n","activity_task_modal":"[\n  {\n    \"name\": \"mango25_luckytrain\",\n    \"localStorageName\": \"mango25_luckytrain\",\n    \"open\": false,\n    \"taskId\": {\n      \"web\": \"500125\",\n      \"client\": \"500125\"\n    },\n    \"actionName\": {\n      \"web\": \"mango25_luckytrain.500125\",\n      \"client\": \"mango25_luckytrain.500125\"\n    },\n    \"group\": \"mango25_luckytrain\",\n    \"backgroundImg\": \"https://lf-douyin-pc-web.douyinstatic.com/obj/douyin-pc-web/jifuqi_bg.png\"\n  },\n  {\n    \"name\": \"mango25_u...
-
-[可能 API] https://mon.zijieapi.com/monitor_browser/collect/batch/?biz_id=webcast_douyin_pc
-
-[可能 API] https://lf3-config.bytetcc.com/obj/tcc-config-web/tcc-v2-data-douyin.pc.search-default
-[Response JSON]: {"data":{"pageGrayscale":"{\n    \"mode\": \"\",\n    \"blockList\": {\n        \"all\": [],\n        \"part\": []\n    }\n}","searchActivity":"{\n    \"olympicSearch\": {\n        \"isActive\": true,\n        \"backgroundImageDark\": \"https://lf3-static.bytednsdoc.com/obj/eden-cn/ojyhlz_jw_upfbvk/ljhwZthlaukjlkulzlp/olympics_2024/bg.png\",\n        \"backgroundImageLight\": \"https://lf3-static.bytednsdoc.com/obj/eden-cn/ojyhlz_jw_upfbvk/ljhwZthlaukjlkulzlp/olympics_2024/bg.png\",\n        \"activityTab\": \"general\",\n        \"forceHeaderContentLight\": true,\n        \"forceToolbarListTypeLight\": true,\n        \"forceToolbarFilterLight\": true\n    }\n}\n","searchPanelGrayscale":"{\n    \"grayscale\": false\n}","search_under_inbox_config":"{\n    \"update_frequency\": 6\n}"},"version_code":"f534fc21","modify_time":1751376379}...
-
-[可能 API] https://mcs.zijieapi.com/list
-[Response JSON]: 無法直接取得或非 JSON
-
-[可能 API] https://live.douyin.com/aweme/v1/web/get/user/settings?device_platform=webapp&aid=6383&channel=channel_pc_web&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=dy4fgt7imxWVCdMGuKckS9Kl5qdMrBWjgliOSr5KSVGSchUarbNLFntOboFr4D57AWBiioIHUxzMbxxcs9Uz11rpqmkvuMsSS4C9VXmLMZH1YTvh9Hf%2FCktoqJiP%2F5uEKAl4xIJ6WU8O1xcUwNQk8d57z%2FUy5QmpWi9kfxvaE1qhhB4e72L%3D
-[Response JSON]: {"status_code":0,"landing_reason":"user_landing_recommend_default"}...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/solution/resource/list/?spot_keys=7359502129541449780_douyin_spec_theme&app_id=6383&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=mj0VDqWjQNWVcdFtYOn0SHKlmHjMrP8j2PTxbG%2Fu9PuwOZlP1SNgFntYaoFN4EQ75WBkio176xzMYDdczoUT1lrkzmkvSKhWRsC9VW0L8ZH2Ysvh9Nf2CDtLwJNOAR8E%2F5lJxlyI6U8P1DQUwqdw8B5HF%2FU7QYRpWJ9TfOfGN1q6IGUe7sE%3D
-[Response JSON]: {"status_code":0,"status_msg":"","resource_list":[]}...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/ab/params/?device_platform=webapp&aid=6383&channel=channel_pc_web&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=x6sRDz67EZ8RFdKSmKnTSeOUIhVMrTWjgliQSr-utxPtcqzarYNYFnbYJoFnsDQ758pTiq17XxzAbDdcTxXi1lnkKmpku%2FiRR4CVVXso8Z7IYPvhVHR%2FCsbouJiP%2FbSEQAl7xAJ66U8aZd5UwHdT8d57K%2Fl7QQYpWJ9ifNvai1wX244a78W%3D
-[Response JSON]: {"data":{"info":{"rsp_type":5,"version_name":"12305811,12561304,13032812,13630772,13960207,14367358,14373612,14486755,14490808,14500291,2610128,2746094,3542194,4096334,4113875,4318523,4330383,4356220,4522572,4890006,5290383,5595376,5916975,6208034,6249952,6571806,7142413,7204588,7222035,7329296,7349377,7354842,7551466,7684409,7855365,8160324,8457622,8464919,8504307,8553216,8612128,8639938,8710002,8776365,8885971,8901776,8972084,8985781,9136489,9136602,9413141,9674943,10251872,10305502,10433952,10598791,10645726,10655160,10703934,10743278,10748024,10772964,10781149,10849828,10854672,10879886,11144716,11197613,11232911,11257940,11266744,11308093,11355409,11400168,11400173,11442711,11503578,11541723,11541832,11541997,11542000,11563235,11565349,11645964,11649962,11661813,11709192,11731663,11763330,11786008,11796252,11823586,11823742,11823878,11851558,11873862,11906660,11970509,11970594,11970658,11973438,11973498,11973600,11973651,11973707,11973752,11973825,11973894,11978727,11978749,119787...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/solution/resource/list/?spot_keys=7359502129541449780_douyin_spec_theme&app_id=6383&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=Ov05hzXjDZ5RFd%2FGmCnsSCPU-XnlrTSjoeixbbQuePKycZePrYNmFrGYroFNsEc758pwiqI7AxFAbDncsoXh11rpKmkDS00fRU9IVU0LgZH2bsihnqRxCDGLLJNP%2F58EK514xljIIU8aZxcUkrdh8QlHF%2FUyQYmpR79wfPvaO1q6Xstt7MS%3D
-[Response JSON]: {"status_code":0,"status_msg":"","resource_list":[]}...
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1122&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&a_bogus=dj0fg7tJDp5RPdFG8OnTS9NU%2FH6lNTSjEBT%2FRrCKSNOvch0cr8NuFxSOboFr4dQ7CmBziFV71xz%2FbDdcznXT11HkzmpDSO7yS0CIVXsoMZ72bTkhVNRKCmSLwJNPAb8E%2FA1vxI7I6U8c1dOUiqds8B-7F%2FU75QbpS7CkfOfGO1qIg4tn7Mm%3D
-
-[可能 API] https://mon.zijieapi.com/monitor_browser/collect/batch/?biz_id=anniex_web_webcast
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1195&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&a_bogus=E7snDeWEDNQ5adFSuCnkSC9U4ZnMrBWj1ei2SLPuePOHcwtOImN8FcbOjozx4x57ARBkio37lxFMYDxcsnUk11rkomkfSFkjb095V60LhZHIYPkhVHRQCstLoJicAc8E%2F%2F14x1J6IU%2FP1dQUkqd08d5Hu%2FlLQQRpRiCifNfGx1q6g4Gt7gL%3D
-
-[可能 API] https://live.douyin.com/aweme/v1/web/external/notification/?device_platform=webapp&aid=6383&channel=channel_pc_web&os=2&client_type=1&scene=admin_pc_push&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=D64VkHXEYpRfFd%2FG8ccsS9ZUVo6%2FrPSjTMTQWwAu9OPPcq0PvRPgPNtYnoFrsDc7cmpsiqIHUxz%2FYDdc0nUs1IHkompvuF4bR49cVU0o8ZH1bsJhnHR2CmGoqJNaARSEQQl7xlj6UU8cZDOUkNdk8BAHL%2Fl75mmpR79kfOfGE1qhhTTa7Dg%3D
-[Response JSON]: {"status_code":0,"tips":null,"appointment_live_list":null}...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/hot/search/list/?device_platform=webapp&aid=6383&channel=channel_pc_web&detail_list=1&source=6&main_billboard_count=5&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&a_bogus=Y60Rhet7DN8neVKSmccTS9dUfILlrBWjUeixbeVKHPYvcZUcJWNDPNtOJoFNsEc7cRBhioVHUxFlbDVcz9Xz119kLmpvuFzySs9cVX0L%2FZHZYBJhnrRKCsbLqJia%2F5uEOAlGxlJIWU%2FP1dQUwNd08dl7K%2Flw5mbpWJCsfN6GO1qXg4Xt78S%3D
-[Response JSON]: {"banner_dark":{"uri":"33a57000197f34889bc27","url_list":["https://p3-sign.douyinpic.com/obj/33a57000197f34889bc27?lk3s=03ea9982\u0026x-expires=1761274800\u0026x-signature=CpTe5LHhLdD8gBs2OUXzoIWJTgU%3D\u0026from=65706370","https://p26-sign.douyinpic.com/obj/33a57000197f34889bc27?lk3s=03ea9982\u0026x-expires=1761274800\u0026x-signature=Kc%2BbGx%2FFoiE7Fntzb3x5kN3p2fY%3D\u0026from=65706370","https://p9-sign.douyinpic.com/obj/33a57000197f34889bc27?lk3s=03ea9982\u0026x-expires=1761274800\u0026x-signature=MJ6RlaWG8imqn1Qnm3mASNhiKSs%3D\u0026from=65706370"]},"banner_light":{"uri":"33a580000cefdf44e9f76","url_list":["https://p11-sign.douyinpic.com/obj/33a580000cefdf44e9f76?lk3s=03ea9982\u0026x-expires=1761274800\u0026x-signature=WtS17ffYlLbb9%2FmsI2dy4Nb%2Blrk%3D\u0026from=65706370","https://p3-sign.douyinpic.com/obj/33a580000cefdf44e9f76?lk3s=03ea9982\u0026x-expires=1761274800\u0026x-signature=jSytog5mmDavdd5RYolX%2Fz9XqDo%3D\u0026from=65706370","https://p26-sign.douyinpic.com/obj/33a580000...
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1118&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&a_bogus=YXsVkzWyxpmneVKG8ccsSHZlkLjMrT8jXeioWNOKHNFfcZFPvRPgPcbYJozN4DO7AmpsioVHlxF%2FbEVcsoXi1I9kqmpDSBTfR499VUsogZHZbTJhnqRdCkbooJNO%2F58EOQlXxIyIXU%2FcZD5UhqQi8QA7o%2FU75mmpbJCsfx6GY1q16Bsj7m6%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1131&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&a_bogus=QJsjD7tyx2QbadFt8KciSePlN9glrPSjbeTOSNFuS5cROwUaHbNuPNGYboFrsxc7AWpwiK1H6xFAbEdcznUT1A9pFmpkSiXbb099V6fLMZrIbsvhVrfxCkSLKJiO%2Fb8EQQ1txAJ6UU%2FOZxQUwNQi8p-Ho%2FUL5mbpRiCifP6ax1wp2c4HEj%3D%3D
-
-[可能 API] https://mssdk.bytedance.com/web/r/token?ms_appid=6383
-[Response JSON]: {"maigc":538051346,"version":1,"dataType":8}...
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1118&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=DJs5gqtLmZRbOd%2FGYOnsS9Cl466ANTujveidS9AuSxO%2FOZlO9YP8PxtYnoFnsxQ7Ampwio37WxFAbxncznXs1InkompDSF0RS49CVUsLhZH2bsvhnqfOCDGoKJNPA5uEOQ1UxAJIWU8cZD5Ukrdi8Q-Hw%2FULQQmpRi9hfPfGO1w6XG7G7hW%3D
-Created TensorFlow Lite XNNPACK delegate for CPU.
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1126&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=QvUnDwyimqWVPd%2FSuKnTSjMlyHjMNTWjyaioSyduHNOgcw0O0bNEFcSOnozr4dc7AmBkiF17UxzlbEnczoXz1IHpompvSqXSb49AV6foMZr2YBvhVHf%2FCsSoLJiaAcSEKQ1txIjIlU8a1dQUiHQT8QlHF%2FULQOYpb79ifPvGY1w62c4Hgf%3D%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1122&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=DvUfktyJxq8jeVMG8cniSG5lKXnMNTWjxBi%2FWJ5K7OKWcZFOYuPgFcSOJozrsDO7C8phio1HUxF%2FbdVczxXs1lHkompvSxUfWs99VU8oZZ71bTkhIrROCDboLJicAR8EO%2F17xA76IU%2FaZDOUwqQw8p-7K%2FU75OmpR7CkfxXaO1q664Xe7pS%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1143&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=df4fhztwxdQcFdKb8cniSJKlDwfMrTWjEliKSbBKePT1cheOMSPmFabYGozx4E575WpsiqVH6xF%2FYDnc0oUh1AHpFmpkSPGRbsC9VX0o8Z71bTkhnqRoCstLwJia%2F5SEK51XxIyI1U8PZDcUwHdz8pA7w%2Fl75mRpWw9TfxXaN1wZgGiS72y%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1117&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=Ey45kHSixp8ceVKSmOniSJ9UY1oMNsSjTaTxS9IuCNTrOhUcKRNmFPbOboFr4xO7C8BTiF1HIxFMYdxcT9Uw11nkFmkvukzybU95VU6ogZrZbBihVNRKCmGLoJiP%2FbuEK%2FlUx1JIlU%2FP1EQUhHQh8d57L%2FUL5mYpbw9kfPfGP1wVg547iE%3D%3D
-
-[可能 API] https://live.douyin.com/aweme/v1/web/query/user/?device_platform=webapp&aid=6383&channel=channel_pc_web&publish_video_strategy_type=2&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=DXsVkw7jYdQjadMGuOc0SjMU%2FI2MrPSjEaTdST9uexO9OwzOsSNLPxSYGozn4DO7A8pwiqV7AxFMbxdc0oXk1lrpwmpfSQUSS09VVUsL%2FZ71bsihnNfQCDbLLJNO%2FbuEQ%2FltxlJIUU8PZDcUhqQT8d-HF%2Fl7QQYpSJ9TfNXaP1wIgszS7Bb%3D
-[Response JSON]: {"id":"7564537236920239662","create_time":"1761256084","last_time":"1761256084","user_uid":"4434809990429467","user_uid_type":0,"firebase_instance_id":"","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.0.0 Safari/537.36","browser_name":"Safari"}...
-
-[可能 API] https://live.douyin.com/aweme/v1/web/query/user/?device_platform=webapp&aid=6383&channel=channel_pc_web&publish_video_strategy_type=2&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=0&cpu_core_num=16&version_code=170400&version_name=17.4.0&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Chrome+Headless&browser_version=141.0.0.0&browser_online=true&engine_name=Blink&engine_version=141.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=10&effective_type=4g&round_trip_time=50&webid=7564537236920239662&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=DjUfhwU7xoQ5PdKSYCcsSbBUBg9MNPSjgeTOSYHu7xY9OhzOsSPDPOGYJozr4dO75mphiK37Uxz%2FbDVcz9XT11HpzmpvSPvfSs9CV6moZZHIbTvhVrRdCstLwJiO%2F58E%2FA14xlJ6AU%2FO1EOUkrdh8p-Hz%2Fly5YbpSwCifxvGi1w16-sb7Mb%3D
-[Response JSON]: {"id":"7564537236920239662","create_time":"1761256084","last_time":"1761256084","user_uid":"4434809990429467","user_uid_type":0,"firebase_instance_id":"","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.0.0 Safari/537.36","browser_name":"Safari"}...
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1118&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=Y6sfhqtEYp5nKdMb8ccTSJZl-yo%2FNsWjJai%2FSClKCxOlOheOT8NEPPSYrozNsd57CRpsio1HAxzlYdxczoXh1IrkompvuFXfSUCCV6sLgZ71YBihIqRxCkSLzJic%2F5WE%2F5l4xA7I6U8P1E5UhHdk8Q-7F%2FUL5QYpSiCzfNXGY1wgXT7t7gj%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1182&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D&a_bogus=OyURgqUyDx5nadMt8OcsSjIUN2jlNB8jZFiQbw3uyPuoOqUO8mP8PatOGozr4xO75WphiF37UxFAbExczxUw119pumpvSpJjRs9VVU6ogZJIbBJhIqRdCDGooJiP%2F5uEOAlGxIj61U%2FO1xQUwNQ08pA7F%2FUyQYRpSJ90fOXaY1qVgOTHIE%3D%3D
-
-[可能 API] https://mssdk.bytedance.com/web/common?ms_appid=6383&msToken=P8epmbijPYY31oELCHH9pO8isWQEJ57QnDltBbwreLHfleGgBlcGfy4lKb1vilbYVmmwW4Rka3_g_3N5BhcTmanqtVbhkxUR0fBh8evxb8CvLkhw2k8Fzn2da8VxdImbQ8YMhUm2WjHglweHPBAZIbDVq4oADwt1lhM%3D
-[Response JSON]: {"maigc":538051346,"version":1,"dataType":8}...
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1123&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=mf0fgw7JYoQjcdFGucn0SjoUVLxlNTWjoaiQSeVuyPuSchtaP8PEPabOboFr4EO7cWp0iF376xFMYdVcToXi11rpKmkkSMT6S49IV6mogZHZbBJhnNfQCDtLFJiPA5SEOQlJxAj6AU8c1x5UkNQs8d57z%2FlwQYbpSiChfx6aP1q6hBsJ7kE%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1133&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=d70fDHyEE28baVMGuCcwSaBUS1y%2FNPWjjlioWqQKtPFwOwlPwbPEFPGYJoznsdO758piioV71xF%2Fbxncz9UT1lnpqmpfuo0jbsC5VXfL%2FZJZYsihVNRQCDbLwJNaAcSEO51txA7IWU8OZDcUwrdz8dA7o%2FULQmbpbwChfPvaN1wIgbT9Uf%3D%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1145&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=OXUjkHSjDo%2FnedFGuCciSalU-ZIlrTWjHPiObGFu7xzkOqMOgbPmFPbOGozr4E57AWpziq3H1xFAbDdc09UT11Hpompfu0Jbb0CAVXmLMZHZbskhnrfQCktouJia%2FbuEQ5lXxAyIWU%2Fa1EQUiHdw8dlHz%2FlwQQRpb7ChfOvaP1qghsJa7su%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1122&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=xf45kzUwxN5jad%2FG8ccwSrPUsw2ANBSjsFT%2FWScKyxTNOZlOpYPmFPSOroFx4xQ7cWBiiqV7UxFMbDxc0nUi1I9kumkfSP4Wb49IVXmLZZHIbBkhnHRdCkSLLJiO%2FRSEK51Xxl76lU8a1D5UhrQs8BlHK%2Fl75YbpRJ9wfPfai1q1XBsc7Zb%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1130&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=EXUVgHSExo%2FnCdMGYCnsSaCUzZEMrBSjBeTKWCouCNzocqlcxuNDFnGOrozN4dc7c8BkiqVHlxz%2FYxxcz9Xz1InkFmpkuDJyb49VVXXLhZJ1YTkh9qfxCDtLzJiOAcWEQ%2F1Xx17I6U8P1EcUiqdw8pA7u%2FULQORpS79kfNvGi1q06Y4HhE%3D%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1129&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=x6URkwyEEqQcCd%2FSuKciSrMUD9nArTSjg-TKWo3uyxKPOZeckYNgPaGOaoFx4DO75RBTioVHWxz%2FYxncToXi1ArpKmpvS%2FhWb4CIVW0oMZ72bsvhVqfoCDbLoJNaAcuEQ5lvx1jIlU8a1xcUhNQk8pAHw%2Fl7QQYpWw9ifNfaE1q6Iate78j%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1146&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=xjU5ht67Y25fOdKtmKnTSaVl96I%2FrP8jZlixS7QKyNFvOhUOLRNmPNbOaoFNsDO7A8pziK37XxFlbDVcsoXs1ArkFmkkSgURRsCIVUvo8ZrIYBvh9rfOCmGLqJNO%2Fc8EKA1tx1JIAU8PZDOUwrQh8plHq%2FlyQQRpRiCsfxfGP1wp6b49iD%3D%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1122&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=Qv05hwyLEp55Od%2FGuKciScqUU9gANBSjzaiKWyeu9xTNOwMOp8PDPOSYaoFnsDc7cRBkiqI7Axz%2FYExc0oXw1l9kzmpku87bS4C5VW0LMZ71bskhVHROCsGoKJiaAcuEK%2FlXx1j6lU8c1dQUhqQz8d57q%2Fl7QYmpWJ9wfOfGY1wgXazr70W%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1127&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=QjsVgwSLQoQcKdFtYOckSr9ln2jMNTWjwaiORoVutPKlOZtc2mNmPrtOGoFrsEQ75mBTiq3HlxF%2FbDnc0oUw1I9kzmkDuwkjW0C5VW6ohZHIbTkhIrRoCsSLuJNO%2FRWEKQlXxAj6IU%2FPZxQUiqdi8Ql7o%2FlLQQmpWw9kfNfGi1qd30hc
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1128&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=DysRgeyyQN8beVMG8ccTSy2UE0flrB8jsPiOSonuC-bpOZePGWNgMabOnoFN4E57CmBkiq3H1xF%2FbxxcT9Uw1lrkumkfuivRW09CVXmoZZ7ZbBJhIqRKCmGouJNO%2FcWEO%2FlGxlyIUU%2FP1E5Uhqdw8Q-Hq%2FlL5ObpWwC0fOfaY1whg-sa7dj%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1130&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=Ev4VhwSExpARKd%2FtuOciSS1U2FE%2FrTujMFiQW9xKSNzqcwlcSRPEMnSOGoFxsxO7cRBkioVH1xFAbdncT9Xs1lnpKmpvuQsyWs95VW0ogZ7ZYTkh9rfQCmbLzJNP%2FcWEO%2FltxAJIWU%2Fc1EOUkrQw8plHw%2FUy5mmpR79hfN6ax1q1g4iC7%2F8%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1133&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=EJUVkw7JdpmjadFGYCnzSSaUxl9MNPSjjMToWFMu7PzwOZFPAYPYMxbOaozr4DO758BwiqV71xFAbdVcT9Xi11rkqmkfSiUjb4CcVXXL0Zr1bTvhIrfdCmbLoJicAR8EOAl4xIy61U%2FP1xOUwqdh8d-7u%2FlL5YYpb7CsfNfaN1qV2cT9HD%3D%3D
-
-[可能 API] https://live.douyin.com/webcast/im/fetch/?resp_content_type=protobuf&did_rule=3&device_id=&app_name=douyin_web&endpoint=live_pc&support_wrds=1&user_unique_id=7564537236920239662&identity=audience&need_persist_msg_count=15&insert_task_id=&live_reason=&room_id=7564520129317358371&version_code=180800&last_rtt=1132&live_id=1&aid=6383&fetch_rule=1&cursor=&internal_ext=&device_platform=web&cookie_enabled=true&screen_width=800&screen_height=600&browser_language=zh-TW&browser_platform=Win32&browser_name=Mozilla&browser_version=5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+HeadlessChrome%2F141.0.0.0+Safari%2F537.36&browser_online=true&tz_name=Asia%2FTaipei&msToken=kd15kfIltjnW4zwnNHFIpHxtOn3v9KZgq3jLS2aW28ZoJ5bjlmf4m6lte8774bo1gLCZEFOak8fsObbl-MJ70pcnZOuF88yiWZrt5hOKC8V1CJ3Sj-rv42k-9LZpqe4zfulMGUVJtuY-muFjg5I4wQDY4_arb3BbrQcEcKWUyTpclHn0BxQOJ8WfmNc%3D&a_bogus=Ej0fDwy7xdQnPdFtmCnhSSQU3WgANsWjaeiQWNFK9PThOhtaUuP8BxSOboFn4dO7C8BTioI7IxFlYDnc0xUk1I9kzmpkuzUWRsCIVWsoZZHZbBvhnHfQCDSozJiPAb8EO%2F17x176XU8OZEcUiqd08Q57F%2Fl7QmmpRwCkfNXaP1qXX-wt7Bf%3D
-監控結束，瀏覽器已關閉。
-
-D:\User\doggy\Desktop\qincai>
